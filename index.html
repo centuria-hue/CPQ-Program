@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transportation Camera CPQ Program | VIVOTEK Delta Group</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- html2pdf Library for client-side PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Navbar Header -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="brand-logo">
+          <i class="fas fa-camera-retro" style="font-size: 28px; color: var(--accent-cyan);"></i>
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="brand-title">VIVOTEK</span>
+              <span class="brand-badge">Delta Group</span>
+            </div>
+            <div class="brand-subtitle">Transportation Vertical CPQ Configurator</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="exportPdfBtn" class="btn btn-export">
+          <i class="fas fa-file-pdf"></i> Export Spec PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- Step 1: Sales & Customer Session Input -->
+    <section class="session-panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <i class="fas fa-user-tie"></i> Sales & Customer Details
+        </div>
+        <span style="font-size: 11px; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Step 1 of 3</span>
+      </div>
+
+      <div class="session-inputs">
+        <div class="form-group">
+          <label for="salesNameInput"><i class="fas fa-id-badge"></i> Sales Representative</label>
+          <input type="text" id="salesNameInput" class="form-control" placeholder="e.g. Ray Chuang / Delta Sales">
+        </div>
+        <div class="form-group">
+          <label for="customerNameInput"><i class="fas fa-building"></i> Customer / Client Name</label>
+          <input type="text" id="customerNameInput" class="form-control" placeholder="e.g. Metro Transit Authority">
+        </div>
+        <div class="form-group">
+          <label for="projectNameInput"><i class="fas fa-folder-open"></i> Project / RFQ Name</label>
+          <input type="text" id="projectNameInput" class="form-control" placeholder="e.g. Line 2 Fleet Upgrade 2026">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Grid -->
+    <main class="main-content">
+
+      <!-- Left Column: Camera Model Selector -->
+      <aside class="catalog-sidebar">
+        <div class="sidebar-title">
+          <span><i class="fas fa-video"></i> Select Camera Model</span>
+          <span style="font-size: 11px; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Step 2</span>
+        </div>
+
+        <div id="modelCatalogContainer">
+          <!-- Dynamically populated model cards -->
+        </div>
+      </aside>
+
+      <!-- Right Column: Spec Configurator & Commercial Readout -->
+      <section class="configurator-area">
+
+        <!-- Sticky Commercial Readout Bar -->
+        <div class="metrics-bar">
+          <div class="metric-card">
+            <div class="metric-label">Custom Addon Delta</div>
+            <div id="readoutAddonPrice" class="metric-value highlight-green">+$0 USD</div>
+            <div class="metric-sub">Custom Specs Price Impact</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">NRE Setup Fee</div>
+            <div id="readoutNreFee" class="metric-value highlight-amber">$0 USD</div>
+            <div class="metric-sub">One-time Engineering / Tooling</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">System MOQ</div>
+            <div id="readoutMoq" class="metric-value highlight-cyan">10 Units</div>
+            <div class="metric-sub">Minimum Order Quantity</div>
+          </div>
+        </div>
+
+        <!-- Spec Configurator Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+          <h3 style="font-size: 16px; font-weight: 800; color: var(--text-main);">
+            <i class="fas fa-sliders" style="color: var(--accent-cyan);"></i> Technical Specification & Customizer
+          </h3>
+          <span style="font-size: 11px; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Step 3 of 3</span>
+        </div>
+
+        <!-- Dynamic Spec Table Container -->
+        <div id="specTableContainer">
+          <!-- Dynamically populated spec tables with dropdowns -->
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Direct Standard Scripts (No ES6 module CORS issues) -->
+  <script src="data/productsData.js"></script>
+  <script src="js/pdfExport.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
