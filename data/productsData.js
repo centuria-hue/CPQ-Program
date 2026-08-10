@@ -1,0 +1,674 @@
+window.PRODUCTS_DATA = [
+  {
+    "id": "MD9584",
+    "modelName": "MD9584",
+    "displayName": "MD9584 5MP Mobile Dome Network Camera",
+    "series": "S Series - Transit Surveillance",
+    "category": "Mobile Dome Camera",
+    "baseMOQ": 10,
+    "description": "5MP Mobile Dome Network Camera engineered for transit vehicles and railway rolling stock. Fully EN 50155 & ECE R118 certified with IP68/IK10+ rugged housing.",
+    "specifications": [
+      {
+        "category": "System Information",
+        "items": [
+          { "key": "CPU", "value": "Multimedia SoC (System-on-Chip)", "customizable": false },
+          { "key": "Flash", "value": "8GB", "customizable": false },
+          { "key": "RAM", "value": "2GB", "customizable": false },
+          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+        ]
+      },
+      {
+        "category": "Camera Specifications",
+        "items": [
+          { "key": "Image Sensor", "value": "1/2.7\" Progressive CMOS", "customizable": false },
+          { "key": "Max. Resolution", "value": "2560 x 1920 (5MP)", "customizable": false },
+          { "key": "Lens Type", "value": "Fixed-focal", "customizable": false },
+          { "key": "Focal Length", "value": "f = 3.6 mm", "customizable": true, "customKey": "focalLength" },
+          { "key": "Aperture", "value": "F2.0", "customizable": false },
+          { "key": "Iris Type", "value": "Fixed-iris", "customizable": false },
+          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
+          { "key": "Day/Night & IR Filter", "value": "Yes, Removable IR-cut filter", "customizable": false },
+          { "key": "IR Illuminators / Light", "value": "Built-in IR illuminators (850nm, effective up to 50m)", "customizable": true, "customKey": "irIlluminator" },
+          { "key": "Minimum Illumination", "value": "0.1 Lux @ F2.0 (Color), 0.01 Lux @ F2.0 (B/W), 0 Lux IR ON", "customizable": false },
+          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording", "customizable": false }
+        ]
+      },
+      {
+        "category": "Housing Paint & Coating Finish",
+        "items": [
+          { "key": "Body Paint Color", "value": "RAL 9003 Signal White (Standard)", "customizable": true, "customKey": "casingColor" },
+          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
+          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" },
+          { "key": "Salt Spray Resistance", "value": "200 Hours (Standard ASTM B117)", "customizable": false }
+        ]
+      },
+      {
+        "category": "Video & Audio",
+        "items": [
+          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
+          { "key": "Maximum Frame Rate", "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080", "customizable": false },
+          { "key": "Maximum Streams", "value": "3 simultaneous streams (Up to 8 configurable profiles)", "customizable": false }
+        ]
+      },
+      {
+        "category": "Network & Interface",
+        "items": [
+          { "key": "Users", "value": "Live viewing for up to 10 clients", "customizable": false },
+          { "key": "Security", "value": "IEEE 802.1x, Signed firmware, HTTPS, Digest authentication, Audit log", "customizable": false },
+          { "key": "Interface & PoE Connector", "value": "Single HL3 cable with M12 D-Coded 4-pin", "customizable": true, "customKey": "connectorType" },
+          { "key": "ONVIF", "value": "Profile G, S, T supported", "customizable": false }
+        ]
+      },
+      {
+        "category": "AI Analytics & Integration",
+        "items": [
+          { "key": "Compute Capability", "value": "SoC with built-in hardware deep learning accelerator", "customizable": false },
+          { "key": "AI Package / Solution", "value": "Trend Micro (3-year free trial), Onboard AI (Smart Motion Detection)", "customizable": false }
+        ]
+      },
+      {
+        "category": "General & Environmental",
+        "items": [
+          { "key": "Power Input", "value": "Camera: IEEE 802.3af PoE Class 0", "customizable": false },
+          { "key": "Casing & IP Rating", "value": "IP68, IP6K9K, NEMA 4X, IK10+ with AR-coated glass", "customizable": false },
+          { "key": "Certifications", "value": "Railway: EN 50155: 2021, EN 50121, EN 45545-2 / Auto: ECE R118", "customizable": false },
+          { "key": "Operating Temperature", "value": "-40°C ~ 70°C (-40°F ~ 158°F)", "customizable": false }
+        ]
+      }
+    ],
+    "customizableSpecs": {
+      "firmwareOption": {
+        "label": "Firmware Version & Feature",
+        "targetCategory": "System Information",
+        "targetKey": "Firmware Version / Feature",
+        "defaultOption": "standard",
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard production firmware release."
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true,
+            "description": "FW NRE fee will be quoted after R&D engineering workload evaluation."
+          }
+        ]
+      },
+      "focalLength": {
+        "label": "Lens Focal Length",
+        "targetCategory": "Camera Specifications",
+        "targetKey": "Focal Length",
+        "defaultOption": "3.6mm",
+        "options": [
+          {
+            "id": "3.6mm",
+            "name": "3.6 mm (Standard 83° FOV)",
+            "specValue": "f = 3.6 mm (Standard 83° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard wide-angle lens for vehicle interior."
+          },
+          {
+            "id": "6.0mm",
+            "name": "6.0 mm (Standard 52° FOV)",
+            "specValue": "f = 6.0 mm (Standard 52° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard telephoto lens for corridor viewing."
+          },
+          {
+            "id": "2.8mm",
+            "name": "2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "f = 2.8 mm (Custom 105° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "8.0mm",
+            "name": "8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "f = 8.0 mm (Custom 38° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "12.0mm",
+            "name": "12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "f = 12.0 mm (Custom 25° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          }
+        ]
+      },
+      "irIlluminator": {
+        "label": "IR Illuminator & Light",
+        "targetCategory": "Camera Specifications",
+        "targetKey": "IR Illuminators / Light",
+        "defaultOption": "850nm",
+        "options": [
+          {
+            "id": "850nm",
+            "name": "850nm IR Illuminators (Standard)",
+            "specValue": "Built-in 850nm IR illuminators (effective up to 50m)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard 850nm infrared light."
+          },
+          {
+            "id": "940nm",
+            "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "Built-in 940nm Covert Invisible IR illuminators",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "white_led",
+            "name": "White Light LED Illuminator (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "Built-in White Light LED illuminators for full color night vision",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          }
+        ]
+      },
+      "casingColor": {
+        "label": "Body Paint Color",
+        "targetCategory": "Housing Paint & Coating Finish",
+        "targetKey": "Body Paint Color",
+        "defaultOption": "ral9003",
+        "options": [
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Standard)",
+            "specValue": "RAL 9003 Signal White (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard factory white powder coating."
+          },
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)",
+            "specValue": "RAL 9011 Graphite Black",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "description": "+$20 USD per unit, Minimum Order Quantity 200 pcs."
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color - Client Specified (Addon: +$35 / MOQ: 200 pcs)",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true,
+            "description": "+$35 USD per unit, Minimum Order Quantity 200 pcs."
+          }
+        ]
+      },
+      "glossLevel": {
+        "label": "Paint Gloss Level",
+        "targetCategory": "Housing Paint & Coating Finish",
+        "targetKey": "Gloss Level",
+        "defaultOption": "gu10_20",
+        "options": [
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard low-reflection matt finish."
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss / High-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "specValue": "GU 60~80 (Semi-Gloss / High-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200,
+            "description": "+$45 USD per unit, $6,000 NRE fee, MOQ 200 pcs."
+          }
+        ]
+      },
+      "colorSamplePlate": {
+        "label": "A5 Color Sample Plate",
+        "targetCategory": "Housing Paint & Coating Finish",
+        "targetKey": "A5 Color Sample Plate",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Sample Plate Required (Standard)",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Proceed directly without pre-production color sample plates."
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate - 5 pcs Pre-production Verification (NRE: $600 USD)",
+            "specValue": "A5 Color Sample Plate (5 pcs pre-production sample set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10,
+            "description": "NRE $600 USD for 5 pcs A5 sample plates."
+          }
+        ]
+      },
+      "connectorType": {
+        "label": "PoE Connector & Harness",
+        "targetCategory": "Network & Interface",
+        "targetKey": "Interface & PoE Connector",
+        "defaultOption": "m12_4pin",
+        "options": [
+          {
+            "id": "m12_4pin",
+            "name": "Single HL3 cable with M12 D-Coded 4-pin (Standard)",
+            "specValue": "Single HL3 cable with M12 D-Coded 4-pin connector",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard M12 D-coded 4-pin PoE connector."
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "specValue": "Single HL3 cable with M12 X-Code 8-pin Gigabit connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500,
+            "description": "+$15 USD per unit, Minimum Order Quantity 500 pcs."
+          },
+          {
+            "id": "harting_push_pull",
+            "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "specValue": "Single HL3 cable with Harting Push & Pull connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500,
+            "description": "+$15 USD per unit, Minimum Order Quantity 500 pcs."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "MD8564-V2",
+    "modelName": "MD8564-V2",
+    "displayName": "MD8564-V2 5MP Mobile Dome Network Camera",
+    "series": "S Series - Transit Surveillance",
+    "category": "Mobile Dome Camera",
+    "baseMOQ": 10,
+    "description": "5MP Mobile Dome Network Camera engineered for transit vehicles and railway rolling stock. Available in EH (PoE) and DEH (DC 12V Power) variants. Fully EN 50155 & ECE R118 certified.",
+    "specifications": [
+      {
+        "category": "System Information",
+        "items": [
+          { "key": "CPU", "value": "Multimedia SoC (System-on-Chip)", "customizable": false },
+          { "key": "Flash", "value": "8GB", "customizable": false },
+          { "key": "RAM", "value": "2GB", "customizable": false },
+          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+        ]
+      },
+      {
+        "category": "Camera Specifications",
+        "items": [
+          { "key": "Image Sensor", "value": "1/2.7\" Progressive CMOS", "customizable": false },
+          { "key": "Max. Resolution", "value": "2560 x 1920 (5MP)", "customizable": false },
+          { "key": "Lens Type", "value": "Fixed-focal", "customizable": false },
+          { "key": "Model Variant & Power / Lens", "value": "MD8564-EH-V2 (PoE, f = 3.6 mm Standard)", "customizable": true, "customKey": "focalLength" },
+          { "key": "Aperture", "value": "F2.0", "customizable": false },
+          { "key": "Iris Type", "value": "Fixed-iris", "customizable": false },
+          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
+          { "key": "Day/Night & IR Filter", "value": "Yes, Removable IR-cut filter", "customizable": false },
+          { "key": "IR Illuminators / Light", "value": "Built-in IR illuminators (850nm, effective up to 30m)", "customizable": true, "customKey": "irIlluminator" },
+          { "key": "Minimum Illumination", "value": "0.1 Lux @ F2.0 (Color), 0.01 Lux @ F2.0 (B/W), 0 Lux IR ON", "customizable": false },
+          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording", "customizable": false }
+        ]
+      },
+      {
+        "category": "Housing Paint & Coating Finish",
+        "items": [
+          { "key": "Body Paint Color", "value": "RAL 9011 Graphite Black (Standard)", "customizable": true, "customKey": "casingColor" },
+          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
+          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" },
+          { "key": "Salt Spray Resistance", "value": "200 Hours (Standard ASTM B117)", "customizable": false }
+        ]
+      },
+      {
+        "category": "Video & Audio",
+        "items": [
+          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
+          { "key": "Maximum Frame Rate", "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080", "customizable": false },
+          { "key": "Maximum Streams", "value": "3 simultaneous streams (Up to 8 configurable profiles)", "customizable": false }
+        ]
+      },
+      {
+        "category": "Network & Interface",
+        "items": [
+          { "key": "Users", "value": "Live viewing for up to 10 clients", "customizable": false },
+          { "key": "Security", "value": "IEEE 802.1x, Signed firmware, HTTPS, Digest authentication, Audit log", "customizable": false },
+          { "key": "Interface & PoE Connector", "value": "Single HL3 cable with M12 D-Coded 4-pin", "customizable": true, "customKey": "connectorType" },
+          { "key": "ONVIF", "value": "Profile G, S, T supported", "customizable": false }
+        ]
+      },
+      {
+        "category": "AI Analytics & Integration",
+        "items": [
+          { "key": "Compute Capability", "value": "SoC with built-in hardware deep learning accelerator", "customizable": false },
+          { "key": "AI Package / Solution", "value": "Trend Micro (3-year free trial), Onboard AI (Smart Motion Detection)", "customizable": false }
+        ]
+      },
+      {
+        "category": "General & Environmental",
+        "items": [
+          { "key": "Power Input", "value": "Camera: IEEE 802.3af PoE Class 0 (EH) / DC 12V (DEH)", "customizable": false },
+          { "key": "Casing & IP Rating", "value": "IP68, IP6K9K, NEMA 4X, IK10+ with AR-coated glass", "customizable": false },
+          { "key": "Certifications", "value": "Railway: EN 50155: 2021, EN 50121, EN 45545-2 / Auto: ECE R118", "customizable": false },
+          { "key": "Operating Temperature", "value": "-40°C ~ 70°C (-40°F ~ 158°F)", "customizable": false }
+        ]
+      }
+    ],
+    "customizableSpecs": {
+      "firmwareOption": {
+        "label": "Firmware Version & Feature",
+        "targetCategory": "System Information",
+        "targetKey": "Firmware Version / Feature",
+        "defaultOption": "standard",
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard production firmware release."
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true,
+            "description": "FW NRE fee will be quoted after R&D engineering workload evaluation."
+          }
+        ]
+      },
+      "focalLength": {
+        "label": "Model Variant (Power & Lens Focal Length)",
+        "targetCategory": "Camera Specifications",
+        "targetKey": "Model Variant & Power / Lens",
+        "defaultOption": "3.6mm_eh",
+        "options": [
+          {
+            "id": "3.6mm_eh",
+            "name": "MD8564-EH-V2 [PoE] - 3.6 mm Lens (Standard)",
+            "specValue": "MD8564-EH-V2 (PoE Power, f = 3.6 mm Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard PoE wide-angle lens model."
+          },
+          {
+            "id": "6.0mm_eh",
+            "name": "MD8564-EH-V2 [PoE] - 6.0 mm Lens (Standard)",
+            "specValue": "MD8564-EH-V2 (PoE Power, f = 6.0 mm Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard PoE telephoto lens model."
+          },
+          {
+            "id": "6.0mm_deh",
+            "name": "MD8564-DEH-V2 [DC 12V Power] - 6.0 mm Lens (Standard)",
+            "specValue": "MD8564-DEH-V2 (DC 12V Power, f = 6.0 mm Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard DC 12V power input model."
+          },
+          {
+            "id": "2.8mm_eh",
+            "name": "MD8564-EH-V2 [PoE] - 2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "MD8564-EH-V2 (PoE Power, Custom f = 2.8 mm Ultra-Wide)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "2.8mm_deh",
+            "name": "MD8564-DEH-V2 [DC 12V Power] - 2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "MD8564-DEH-V2 (DC 12V Power, Custom f = 2.8 mm Ultra-Wide)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "8.0mm_eh",
+            "name": "MD8564-EH-V2 [PoE] - 8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "MD8564-EH-V2 (PoE Power, Custom f = 8.0 mm Telephoto)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "8.0mm_deh",
+            "name": "MD8564-DEH-V2 [DC 12V Power] - 8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "MD8564-DEH-V2 (DC 12V Power, Custom f = 8.0 mm Telephoto)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "12.0mm_eh",
+            "name": "MD8564-EH-V2 [PoE] - 12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "MD8564-EH-V2 (PoE Power, Custom f = 12.0 mm Long-Range)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "12.0mm_deh",
+            "name": "MD8564-DEH-V2 [DC 12V Power] - 12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "MD8564-DEH-V2 (DC 12V Power, Custom f = 12.0 mm Long-Range)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          }
+        ]
+      },
+      "irIlluminator": {
+        "label": "IR Illuminator & Light",
+        "targetCategory": "Camera Specifications",
+        "targetKey": "IR Illuminators / Light",
+        "defaultOption": "850nm",
+        "options": [
+          {
+            "id": "850nm",
+            "name": "850nm IR Illuminators (Standard)",
+            "specValue": "Built-in 850nm IR illuminators (effective up to 30m)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard 850nm infrared light."
+          },
+          {
+            "id": "940nm",
+            "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "Built-in 940nm Covert Invisible IR illuminators",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          },
+          {
+            "id": "white_led",
+            "name": "White Light LED Illuminator (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "specValue": "Built-in White Light LED illuminators for full color night vision",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000,
+            "description": "Requires $6,000 USD NRE fee and 1,000 pcs MOQ."
+          }
+        ]
+      },
+      "casingColor": {
+        "label": "Body Paint Color",
+        "targetCategory": "Housing Paint & Coating Finish",
+        "targetKey": "Body Paint Color",
+        "defaultOption": "ral9011",
+        "options": [
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Standard)",
+            "specValue": "RAL 9011 Graphite Black (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard factory black powder coating for MD8564-V2."
+          },
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Addon: +$20 / MOQ: 200 pcs)",
+            "specValue": "RAL 9003 Signal White",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "description": "+$20 USD per unit, Minimum Order Quantity 200 pcs."
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color - Client Specified (Addon: +$35 / MOQ: 200 pcs)",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true,
+            "description": "+$35 USD per unit, Minimum Order Quantity 200 pcs."
+          }
+        ]
+      },
+      "glossLevel": {
+        "label": "Paint Gloss Level",
+        "targetCategory": "Housing Paint & Coating Finish",
+        "targetKey": "Gloss Level",
+        "defaultOption": "gu10_20",
+        "options": [
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard low-reflection matt finish."
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss / High-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "specValue": "GU 60~80 (Semi-Gloss / High-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200,
+            "description": "+$45 USD per unit, $6,000 NRE fee, MOQ 200 pcs."
+          }
+        ]
+      },
+      "colorSamplePlate": {
+        "label": "A5 Color Sample Plate",
+        "targetCategory": "Housing Paint & Coating Finish",
+        "targetKey": "A5 Color Sample Plate",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Sample Plate Required (Standard)",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Proceed directly without pre-production color sample plates."
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate - 5 pcs Pre-production Verification (NRE: $600 USD)",
+            "specValue": "A5 Color Sample Plate (5 pcs pre-production sample set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10,
+            "description": "NRE $600 USD for 5 pcs A5 sample plates."
+          }
+        ]
+      },
+      "connectorType": {
+        "label": "PoE Connector & Harness",
+        "targetCategory": "Network & Interface",
+        "targetKey": "Interface & PoE Connector",
+        "defaultOption": "m12_4pin",
+        "options": [
+          {
+            "id": "m12_4pin",
+            "name": "Single HL3 cable with M12 D-Coded 4-pin (Standard)",
+            "specValue": "Single HL3 cable with M12 D-Coded 4-pin connector",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "description": "Standard M12 D-coded 4-pin PoE connector."
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "specValue": "Single HL3 cable with M12 X-Code 8-pin Gigabit connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500,
+            "description": "+$15 USD per unit, Minimum Order Quantity 500 pcs."
+          },
+          {
+            "id": "harting_push_pull",
+            "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "specValue": "Single HL3 cable with Harting Push & Pull connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500,
+            "description": "+$15 USD per unit, Minimum Order Quantity 500 pcs."
+          }
+        ]
+      }
+    }
+  }
+];
