@@ -1,8 +1,27 @@
 /**
- * PDF Exporter module for CPQ Program
+ * PDF Exporter module for CPQ Program (V2.1 Beta)
  * Generates an official Specification Sheet & Customization Report for clients & internal operations in English.
- * Configured with strict page-break rules to prevent text slicing across PDF pages.
+ * Includes System Generated Part Number (P/N) breakdown and strict page-break protection.
  */
+
+function getOptionConfig(model, key, selectedOptions) {
+  const specConfig = model?.customizableSpecs?.[key];
+  if (!specConfig) return null;
+  const selectedId = selectedOptions[key];
+  
+  if (key === 'cableRating' && model.id === 'MD9560-V2-Series') {
+    const currentPower = selectedOptions['powerVariant'] || 'poe';
+    const dynamicOpts = currentPower === 'poe' ? [
+      { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 PoE Cable)", pnCode: "3082644400", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+      { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+    ] : [
+      { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 DC Cable)", pnCode: "3080857800", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+      { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+    ];
+    return dynamicOpts.find(o => o.id === selectedId);
+  }
+  return specConfig.options.find(o => o.id === selectedId);
+}
 
 window.generateQuotePDF = function generateQuotePDF(configState) {
   const { salesName, customerName, projectName, model, selectedOptions, customColorValue, customFirmwareValue, calculations } = configState;
@@ -19,7 +38,7 @@ window.generateQuotePDF = function generateQuotePDF(configState) {
     Object.keys(model.customizableSpecs).forEach(key => {
       const specConfig = model.customizableSpecs[key];
       const selectedId = selectedOptions[key];
-      const opt = specConfig.options.find(o => o.id === selectedId);
+      const opt = getOptionConfig(model, key, selectedOptions);
       
       if (opt) {
         const isModified = selectedId !== specConfig.defaultOption;
@@ -40,6 +59,7 @@ window.generateQuotePDF = function generateQuotePDF(configState) {
           targetCategory: specConfig.targetCategory,
           targetKey: specConfig.targetKey,
           optionName: opt.name,
+          pnCode: opt.pnCode || 'STD',
           specValue: finalSpecValue,
           addonPrice: opt.addonPrice || 0,
           nreFee: opt.nreFee || 0,
@@ -68,23 +88,25 @@ window.generateQuotePDF = function generateQuotePDF(configState) {
     customSummaryHtml = `
       <div style="margin-bottom: 20px; border: 2px dashed #0284c7; background: #f0f9ff; border-radius: 6px; padding: 14px; page-break-inside: avoid; break-inside: avoid;">
         <h4 style="margin: 0 0 10px 0; color: #0369a1; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
-          <span>🛠️ Customization Summary (Internal Operations & Engineering Notes)</span>
+          <span>🛠️ Customization Summary & Sub-Assembly P/Ns (Internal Operations)</span>
           <span style="font-size: 11px; background: #0284c7; color: #fff; padding: 2px 8px; border-radius: 10px;">${modifiedOnly.length} Customized Field(s)</span>
         </h4>
         <table style="width: 100%; border-collapse: collapse; font-size: 12px; background: #ffffff; border: 1px solid #bae6fd;">
           <thead>
             <tr style="background: #e0f2fe; color: #0369a1; text-align: left; page-break-inside: avoid; break-inside: avoid;">
-              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 25%;">Spec Item</th>
-              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 45%;">Selected Configuration</th>
-              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 15%;">Addon Delta</th>
-              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 15%;">NRE Fee</th>
+              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 22%;">Spec Item</th>
+              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 15%;">P/N Code</th>
+              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 38%;">Selected Configuration</th>
+              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 12.5%;">Addon Delta</th>
+              <th style="padding: 8px; border-bottom: 1px solid #bae6fd; width: 12.5%;">NRE Fee</th>
             </tr>
           </thead>
           <tbody>
             ${modifiedOnly.map(item => `
               <tr style="border-bottom: 1px solid #e2e8f0; page-break-inside: avoid; break-inside: avoid;">
                 <td style="padding: 8px; font-weight: bold; color: #0f172a; vertical-align: top;">${item.targetKey}</td>
-                <td style="padding: 8px; color: #0284c7; font-weight: bold; vertical-align: top;">
+                <td style="padding: 8px; font-family: monospace; font-weight: bold; color: #0284c7; vertical-align: top;">${item.pnCode}</td>
+                <td style="padding: 8px; color: #0f172a; vertical-align: top;">
                   ${item.specValue}
                 </td>
                 <td style="padding: 8px; color: #059669; font-weight: bold; vertical-align: top;">
@@ -120,7 +142,7 @@ window.generateQuotePDF = function generateQuotePDF(configState) {
       if (item.customizable && item.customKey && selectedOptions[item.customKey]) {
         const optionId = selectedOptions[item.customKey];
         const specConfig = model.customizableSpecs[item.customKey];
-        const matchedOpt = specConfig.options.find(o => o.id === optionId);
+        const matchedOpt = getOptionConfig(model, item.customKey, selectedOptions);
         if (matchedOpt) {
           displayValue = matchedOpt.specValue;
           if (item.customKey === 'casingColor' && optionId === 'custom_color') {
@@ -177,10 +199,20 @@ window.generateQuotePDF = function generateQuotePDF(configState) {
       </tr>
     </table>
 
-    <!-- Commercial Metrics Box -->
+    <!-- Commercial Metrics Box & Part Number Readout -->
     <div style="border: 2px solid #0284c7; border-radius: 6px; padding: 14px; margin-bottom: 18px; background: #ffffff; page-break-inside: avoid; break-inside: avoid;">
-      <h3 style="margin: 0 0 6px 0; color: #0369a1; font-size: 17px;">${model.displayName}</h3>
-      <p style="margin: 0 0 12px 0; font-size: 12px; color: #334155;">${model.description}</p>
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <h3 style="margin: 0 0 4px 0; color: #0369a1; font-size: 17px;">${model.displayName}</h3>
+          <p style="margin: 0 0 10px 0; font-size: 12px; color: #334155;">${model.description}</p>
+        </div>
+      </div>
+
+      <!-- Generated Primary Part Number -->
+      <div style="background: #f0f9ff; border: 1px solid #bae6fd; padding: 8px 12px; border-radius: 4px; margin-bottom: 10px; font-family: monospace; font-size: 13px; color: #0369a1; font-weight: bold;">
+        <span style="font-family: sans-serif; font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: normal; margin-right: 8px;">Configured Primary P/N:</span>
+        ${calculations.primaryPn}
+      </div>
       
       <table style="width: 100%; font-size: 12px; border-top: 1px solid #e2e8f0; padding-top: 8px;">
         <tr>
@@ -215,8 +247,8 @@ window.generateQuotePDF = function generateQuotePDF(configState) {
   // Check if html2pdf is available
   if (window.html2pdf) {
     const opt = {
-      margin:       [10, 10, 10, 10], // top, left, bottom, right margins in mm
-      filename:     `Spec_Sheet_MD9584_${customerName.replace(/[^a-zA-Z0-9]/g, '_') || 'Customer'}.pdf`,
+      margin:       [10, 10, 10, 10],
+      filename:     `Spec_Sheet_${model.id}_${(customerName || 'Customer').replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
       image:        { type: 'jpeg', quality: 0.98 },
       html2canvas:  { scale: 2, useCORS: true, logging: false },
       jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
