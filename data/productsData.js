@@ -12,69 +12,215 @@ window.PRODUCTS_DATA = [
       {
         "category": "System Information",
         "items": [
-          { "key": "CPU", "value": "Multimedia SoC (System-on-Chip)", "customizable": false },
-          { "key": "Flash", "value": "8GB", "customizable": false },
-          { "key": "RAM", "value": "2GB", "customizable": false },
-          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+          {
+            "key": "CPU",
+            "value": "Multimedia SoC (System-on-Chip)",
+            "customizable": false
+          },
+          {
+            "key": "Flash",
+            "value": "8GB",
+            "customizable": false
+          },
+          {
+            "key": "RAM",
+            "value": "2GB",
+            "customizable": false
+          },
+          {
+            "key": "Firmware Version / Feature",
+            "value": "Standard Factory Firmware",
+            "customizable": true,
+            "customKey": "firmwareOption"
+          },
+          {
+            "key": "Dedicated System Part Number",
+            "value": "Standard Configuration (No Dedicated P/N)",
+            "customizable": true,
+            "customKey": "dedicatedPN"
+          }
         ]
       },
       {
         "category": "Camera Specifications",
         "items": [
-          { "key": "Image Sensor", "value": "1/2.7\" Progressive CMOS", "customizable": false },
-          { "key": "Max. Resolution", "value": "2560 x 1920 (5MP)", "customizable": false },
-          { "key": "Lens Type", "value": "Fixed-focal", "customizable": false },
-          { "key": "Focal Length", "value": "f = 3.6 mm", "customizable": true, "customKey": "focalLength" },
-          { "key": "Aperture", "value": "F2.0", "customizable": false },
-          { "key": "Iris Type", "value": "Fixed-iris", "customizable": false },
-          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
-          { "key": "Day/Night & IR Filter", "value": "Yes, Removable IR-cut filter", "customizable": false },
-          { "key": "IR Illuminators / Light", "value": "Built-in IR illuminators (850nm, effective up to 50m)", "customizable": true, "customKey": "irIlluminator" },
-          { "key": "Minimum Illumination", "value": "0.1 Lux @ F2.0 (Color), 0.01 Lux @ F2.0 (B/W), 0 Lux IR ON", "customizable": false },
-          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording", "customizable": false }
+          {
+            "key": "Image Sensor",
+            "value": "1/2.7\" Progressive CMOS",
+            "customizable": false
+          },
+          {
+            "key": "Max. Resolution",
+            "value": "2560 x 1920 (5MP)",
+            "customizable": false
+          },
+          {
+            "key": "Lens Type",
+            "value": "Fixed-focal",
+            "customizable": false
+          },
+          {
+            "key": "Focal Length",
+            "value": "f = 3.6 mm",
+            "customizable": true,
+            "customKey": "focalLength"
+          },
+          {
+            "key": "Aperture",
+            "value": "F2.0",
+            "customizable": false
+          },
+          {
+            "key": "Iris Type",
+            "value": "Fixed-iris",
+            "customizable": false
+          },
+          {
+            "key": "WDR Technology",
+            "value": "WDR Pro (120dB)",
+            "customizable": false
+          },
+          {
+            "key": "Day/Night & IR Filter",
+            "value": "Yes, Removable IR-cut filter",
+            "customizable": false
+          },
+          {
+            "key": "IR Illuminators / Light",
+            "value": "Built-in IR illuminators (850nm, effective up to 50m)",
+            "customizable": true,
+            "customKey": "irIlluminator"
+          },
+          {
+            "key": "Minimum Illumination",
+            "value": "0.1 Lux @ F2.0 (Color), 0.01 Lux @ F2.0 (B/W), 0 Lux IR ON",
+            "customizable": false
+          },
+          {
+            "key": "Storage Slot",
+            "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Housing Paint & Coating Finish",
         "items": [
-          { "key": "Body Paint Color", "value": "RAL 9003 Signal White (Standard)", "customizable": true, "customKey": "casingColor" },
-          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
-          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" },
-          { "key": "Salt Spray Resistance", "value": "200 Hours (Standard ASTM B117)", "customizable": false }
+          {
+            "key": "Body Paint Color",
+            "value": "RAL 9003 Signal White (Standard)",
+            "customizable": true,
+            "customKey": "casingColor"
+          },
+          {
+            "key": "Gloss Level",
+            "value": "GU 10~20 Matt Finish (Standard)",
+            "customizable": true,
+            "customKey": "glossLevel"
+          },
+          {
+            "key": "A5 Color Sample Plate",
+            "value": "Not Required",
+            "customizable": true,
+            "customKey": "colorSamplePlate"
+          },
+          {
+            "key": "Salt Spray Resistance",
+            "value": "200 Hours (Standard ASTM B117)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Video & Audio",
         "items": [
-          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
-          { "key": "Maximum Frame Rate", "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080", "customizable": false },
-          { "key": "Maximum Streams", "value": "3 simultaneous streams (Up to 8 configurable profiles)", "customizable": false }
+          {
+            "key": "Compression",
+            "value": "H.265, H.264, MJPEG",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Frame Rate",
+            "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Streams",
+            "value": "3 simultaneous streams (Up to 8 configurable profiles)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Network & Interface",
         "items": [
-          { "key": "Cable Fire Safety Rating", "value": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)", "customizable": true, "customKey": "cableRating" },
-          { "key": "Users", "value": "Live viewing for up to 10 clients", "customizable": false },
-          { "key": "Security", "value": "IEEE 802.1x, Signed firmware, HTTPS, Digest authentication, Audit log", "customizable": false },
-          { "key": "Interface & PoE Connector", "value": "Single HL3 cable with M12 D-Coded 4-pin", "customizable": true, "customKey": "connectorType" },
-          { "key": "ONVIF", "value": "Profile G, S, T supported", "customizable": false }
+          {
+            "key": "Cable Fire Safety Rating",
+            "value": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)",
+            "customizable": true,
+            "customKey": "cableRating"
+          },
+          {
+            "key": "Users",
+            "value": "Live viewing for up to 10 clients",
+            "customizable": false
+          },
+          {
+            "key": "Security",
+            "value": "IEEE 802.1x, Signed firmware, HTTPS, Digest authentication, Audit log",
+            "customizable": false
+          },
+          {
+            "key": "Interface & PoE Connector",
+            "value": "Single HL3 cable with M12 D-Coded 4-pin",
+            "customizable": true,
+            "customKey": "connectorType"
+          },
+          {
+            "key": "ONVIF",
+            "value": "Profile G, S, T supported",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "AI Analytics & Integration",
         "items": [
-          { "key": "Compute Capability", "value": "SoC with built-in hardware deep learning accelerator", "customizable": false },
-          { "key": "AI Package / Solution", "value": "Trend Micro (3-year free trial), Onboard AI (Smart Motion Detection)", "customizable": false }
+          {
+            "key": "Compute Capability",
+            "value": "SoC with built-in hardware deep learning accelerator",
+            "customizable": false
+          },
+          {
+            "key": "AI Package / Solution",
+            "value": "Trend Micro (3-year free trial), Onboard AI (Smart Motion Detection)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "General & Environmental",
         "items": [
-          { "key": "Power Input", "value": "Camera: IEEE 802.3af PoE Class 0", "customizable": false },
-          { "key": "Casing & IP Rating", "value": "IP68, IP6K9K, NEMA 4X, IK10+ with AR-coated glass", "customizable": false },
-          { "key": "Certifications", "value": "Railway: EN 50155: 2021, EN 50121, EN 45545-2 / Auto: ECE R118", "customizable": false },
-          { "key": "Operating Temperature", "value": "-40°C ~ 70°C (-40°F ~ 158°F)", "customizable": false }
+          {
+            "key": "Power Input",
+            "value": "Camera: IEEE 802.3af PoE Class 0",
+            "customizable": false
+          },
+          {
+            "key": "Casing & IP Rating",
+            "value": "IP68, IP6K9K, NEMA 4X, IK10+ with AR-coated glass",
+            "customizable": false
+          },
+          {
+            "key": "Certifications",
+            "value": "Railway: EN 50155: 2021, EN 50121, EN 45545-2 / Auto: ECE R118",
+            "customizable": false
+          },
+          {
+            "key": "Operating Temperature",
+            "value": "-40°C ~ 70°C (-40°F ~ 158°F)",
+            "customizable": false
+          }
         ]
       }
     ],
@@ -85,8 +231,25 @@ window.PRODUCTS_DATA = [
         "targetKey": "Firmware Version / Feature",
         "defaultOption": "standard",
         "options": [
-          { "id": "standard", "name": "Standard (Factory Default Firmware)", "pnCode": "", "specValue": "Standard Factory Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "customized", "name": "Customized Firmware (Client Specified)", "pnCode": "", "specValue": "Customized Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10, "requiresCustomInput": true }
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "pnCode": "",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "pnCode": "",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true
+          }
         ]
       },
       "focalLength": {
@@ -95,11 +258,51 @@ window.PRODUCTS_DATA = [
         "targetKey": "Focal Length",
         "defaultOption": "3.6mm",
         "options": [
-          { "id": "3.6mm", "name": "3.6 mm (Standard 83° FOV)", "pnCode": "640027800G", "specValue": "f = 3.6 mm (Standard 83° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "6.0mm", "name": "6.0 mm (Standard 52° FOV)", "pnCode": "640027400G", "specValue": "f = 6.0 mm (Standard 52° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "2.8mm", "name": "2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "N/A", "specValue": "f = 2.8 mm (Custom 105° H-FOV)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 },
-          { "id": "8.0mm", "name": "8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "N/A", "specValue": "f = 8.0 mm (Custom 38° H-FOV)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 },
-          { "id": "12.0mm", "name": "12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "N/A", "specValue": "f = 12.0 mm (Custom 25° H-FOV)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "3.6mm",
+            "name": "3.6 mm (Standard 83° FOV)",
+            "pnCode": "640027800G",
+            "specValue": "f = 3.6 mm (Standard 83° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "6.0mm",
+            "name": "6.0 mm (Standard 52° FOV)",
+            "pnCode": "640027400G",
+            "specValue": "f = 6.0 mm (Standard 52° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "2.8mm",
+            "name": "2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "N/A",
+            "specValue": "f = 2.8 mm (Custom 105° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          },
+          {
+            "id": "8.0mm",
+            "name": "8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "N/A",
+            "specValue": "f = 8.0 mm (Custom 38° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          },
+          {
+            "id": "12.0mm",
+            "name": "12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "N/A",
+            "specValue": "f = 12.0 mm (Custom 25° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "irIlluminator": {
@@ -108,9 +311,33 @@ window.PRODUCTS_DATA = [
         "targetKey": "IR Illuminators / Light",
         "defaultOption": "850nm",
         "options": [
-          { "id": "850nm", "name": "850nm IR Illuminators (Standard)", "pnCode": "", "specValue": "Built-in 850nm IR illuminators (effective up to 50m)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "940nm", "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in 940nm Covert Invisible IR illuminators", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 },
-          { "id": "white_led", "name": "White Light LED Illuminator (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in White Light LED illuminators for full color night vision", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "850nm",
+            "name": "850nm IR Illuminators (Standard)",
+            "pnCode": "",
+            "specValue": "Built-in 850nm IR illuminators (effective up to 50m)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "940nm",
+            "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in 940nm Covert Invisible IR illuminators",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          },
+          {
+            "id": "white_led",
+            "name": "White Light LED Illuminator (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in White Light LED illuminators for full color night vision",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "casingColor": {
@@ -119,9 +346,34 @@ window.PRODUCTS_DATA = [
         "targetKey": "Body Paint Color",
         "defaultOption": "ral9003",
         "options": [
-          { "id": "ral9003", "name": "RAL 9003 Signal White (Standard)", "pnCode": "TBD", "specValue": "RAL 9003 Signal White (Standard)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "ral9011", "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "RAL 9011 Graphite Black", "addonPrice": 20, "nreFee": 0, "moqImpact": 200 },
-          { "id": "custom_color", "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "Custom RAL Color", "addonPrice": 35, "nreFee": 0, "moqImpact": 200, "requiresCustomInput": true }
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Standard)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9003 Signal White (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9011 Graphite Black",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true
+          }
         ]
       },
       "glossLevel": {
@@ -130,8 +382,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Gloss Level",
         "defaultOption": "gu10_20",
         "options": [
-          { "id": "gu10_20", "name": "GU 10~20 Matt Finish (Standard)", "pnCode": "", "specValue": "GU 10~20 (Matt Finish)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "gu60_80", "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)", "pnCode": "", "specValue": "GU 60~80 (Semi-Gloss Finish)", "addonPrice": 45, "nreFee": 6000, "moqImpact": 200 }
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "pnCode": "",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "pnCode": "",
+            "specValue": "GU 60~80 (Semi-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200
+          }
         ]
       },
       "colorSamplePlate": {
@@ -140,8 +408,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "A5 Color Sample Plate",
         "defaultOption": "none",
         "options": [
-          { "id": "none", "name": "No Sample Plate Required", "pnCode": "", "specValue": "Not Required", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "a5_sample_5pcs", "name": "A5 Color Sample Plate (NRE: $600 USD)", "pnCode": "", "specValue": "A5 Color Sample Plate (5 pcs set)", "addonPrice": 0, "nreFee": 600, "moqImpact": 10 }
+          {
+            "id": "none",
+            "name": "No Sample Plate Required",
+            "pnCode": "",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate (NRE: $600 USD)",
+            "pnCode": "",
+            "specValue": "A5 Color Sample Plate (5 pcs set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10
+          }
         ]
       },
       "cableRating": {
@@ -150,8 +434,33 @@ window.PRODUCTS_DATA = [
         "targetKey": "Cable Fire Safety Rating",
         "defaultOption": "hl3_poe",
         "options": [
-          { "id": "hl3_poe", "name": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)", "pnCode": "TBD", "specValue": "Single HL3 cable with M12 D-Coded 4-pin (HL3)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "hl1_std", "name": "HL1 Cable (EN 45545-2 Indoor Railway Rating)", "pnCode": "TBD", "specValue": "Single HL1 cable with M12 D-Coded 4-pin (HL1)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 }
+          {
+            "id": "hl3_poe",
+            "name": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)",
+            "pnCode": "TBD",
+            "specValue": "Single HL3 cable with M12 D-Coded 4-pin (HL3)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "hl1_std",
+            "name": "Standard Fireproof Cable (EN 45545 Certified Cable)",
+            "pnCode": "TBD",
+            "specValue": "Single Standard Fireproof cable with M12 D-Coded 4-pin",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "nfpa140_cable",
+            "name": "NFPA-140 Certified Fireproof M12 Cable (Addon: + / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "NFPA-140 Certified Fireproof Railway M12 Cable",
+            "addonPrice": 18,
+            "nreFee": 0,
+            "moqImpact": 200
+          }
         ]
       },
       "connectorType": {
@@ -160,9 +469,59 @@ window.PRODUCTS_DATA = [
         "targetKey": "Interface & PoE Connector",
         "defaultOption": "m12_4pin",
         "options": [
-          { "id": "m12_4pin", "name": "M12 D-Coded 4-pin (Standard)", "pnCode": "", "specValue": "Single HL3 cable with M12 D-Coded 4-pin", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "m12_8pin_xcode", "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "Single HL3 cable with M12 X-Code 8-pin", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 },
-          { "id": "harting_push_pull", "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "Single HL3 cable with Harting Push & Pull connector", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 }
+          {
+            "id": "m12_4pin",
+            "name": "M12 D-Coded 4-pin (Standard)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with M12 D-Coded 4-pin",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with M12 X-Code 8-pin",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          },
+          {
+            "id": "harting_push_pull",
+            "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with Harting Push & Pull connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          }
+        ]
+      },
+      "dedicatedPN": {
+        "label": "Dedicated System Part Number",
+        "targetCategory": "System Information",
+        "targetKey": "Dedicated System Part Number",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "Standard Configuration (No Dedicated P/N)",
+            "pnCode": "",
+            "specValue": "Standard Configuration (No Dedicated P/N)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "dedicated_pn",
+            "name": "Dedicated P/N Creation (Recommended for repeat orders) [NRE: $2,500 USD]",
+            "pnCode": "",
+            "specValue": "Dedicated P/N Creation (Recommended for repeat orders)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       }
     }
@@ -175,74 +534,220 @@ window.PRODUCTS_DATA = [
     "category": "Outdoor Mobile Dome",
     "basePN": "1002-MD8564-V20",
     "baseMOQ": 10,
-    "description": "5MP Mobile Dome Network Camera engineered for transit vehicles and railway rolling stock. Available in EH (PoE) and DEH (DC 12V Power) variants. Fully EN 50155 & ECE R118 certified.",
+    "description": "5MP Mobile Dome Network Camera engineered for transit vehicles and railway rolling stock. Available in EH (PoE) and DEH (DC 24V Power) variants. Fully EN 50155 & ECE R118 certified.",
     "specifications": [
       {
         "category": "System Information",
         "items": [
-          { "key": "CPU", "value": "Multimedia SoC (System-on-Chip)", "customizable": false },
-          { "key": "Flash", "value": "8GB", "customizable": false },
-          { "key": "RAM", "value": "2GB", "customizable": false },
-          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+          {
+            "key": "CPU",
+            "value": "Multimedia SoC (System-on-Chip)",
+            "customizable": false
+          },
+          {
+            "key": "Flash",
+            "value": "8GB",
+            "customizable": false
+          },
+          {
+            "key": "RAM",
+            "value": "2GB",
+            "customizable": false
+          },
+          {
+            "key": "Firmware Version / Feature",
+            "value": "Standard Factory Firmware",
+            "customizable": true,
+            "customKey": "firmwareOption"
+          },
+          {
+            "key": "Dedicated System Part Number",
+            "value": "Standard Configuration (No Dedicated P/N)",
+            "customizable": true,
+            "customKey": "dedicatedPN"
+          }
         ]
       },
       {
         "category": "Camera Specifications",
         "items": [
-          { "key": "Image Sensor", "value": "1/2.7\" Progressive CMOS", "customizable": false },
-          { "key": "Max. Resolution", "value": "2560 x 1920 (5MP)", "customizable": false },
-          { "key": "Lens Type", "value": "Fixed-focal", "customizable": false },
-          { "key": "Focal Length", "value": "f = 3.6 mm", "customizable": true, "customKey": "focalLength" },
-          { "key": "Aperture", "value": "F2.0", "customizable": false },
-          { "key": "Iris Type", "value": "Fixed-iris", "customizable": false },
-          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
-          { "key": "Day/Night & IR Filter", "value": "Yes, Removable IR-cut filter", "customizable": false },
-          { "key": "IR Illuminators / Light", "value": "Built-in IR illuminators (850nm, effective up to 30m)", "customizable": true, "customKey": "irIlluminator" },
-          { "key": "Minimum Illumination", "value": "0.1 Lux @ F2.0 (Color), 0.01 Lux @ F2.0 (B/W), 0 Lux IR ON", "customizable": false },
-          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording", "customizable": false }
+          {
+            "key": "Image Sensor",
+            "value": "1/2.7\" Progressive CMOS",
+            "customizable": false
+          },
+          {
+            "key": "Max. Resolution",
+            "value": "2560 x 1920 (5MP)",
+            "customizable": false
+          },
+          {
+            "key": "Lens Type",
+            "value": "Fixed-focal",
+            "customizable": false
+          },
+          {
+            "key": "Focal Length",
+            "value": "f = 3.6 mm",
+            "customizable": true,
+            "customKey": "focalLength"
+          },
+          {
+            "key": "Aperture",
+            "value": "F2.0",
+            "customizable": false
+          },
+          {
+            "key": "Iris Type",
+            "value": "Fixed-iris",
+            "customizable": false
+          },
+          {
+            "key": "WDR Technology",
+            "value": "WDR Pro (120dB)",
+            "customizable": false
+          },
+          {
+            "key": "Day/Night & IR Filter",
+            "value": "Yes, Removable IR-cut filter",
+            "customizable": false
+          },
+          {
+            "key": "IR Illuminators / Light",
+            "value": "Built-in IR illuminators (850nm, effective up to 30m)",
+            "customizable": true,
+            "customKey": "irIlluminator"
+          },
+          {
+            "key": "Minimum Illumination",
+            "value": "0.1 Lux @ F2.0 (Color), 0.01 Lux @ F2.0 (B/W), 0 Lux IR ON",
+            "customizable": false
+          },
+          {
+            "key": "Storage Slot",
+            "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Housing Paint & Coating Finish",
         "items": [
-          { "key": "Body Paint Color", "value": "RAL 9011 Graphite Black (Standard)", "customizable": true, "customKey": "casingColor" },
-          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
-          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" },
-          { "key": "Salt Spray Resistance", "value": "200 Hours (Standard ASTM B117)", "customizable": false }
+          {
+            "key": "Body Paint Color",
+            "value": "RAL 9011 Graphite Black (Standard)",
+            "customizable": true,
+            "customKey": "casingColor"
+          },
+          {
+            "key": "Gloss Level",
+            "value": "GU 10~20 Matt Finish (Standard)",
+            "customizable": true,
+            "customKey": "glossLevel"
+          },
+          {
+            "key": "A5 Color Sample Plate",
+            "value": "Not Required",
+            "customizable": true,
+            "customKey": "colorSamplePlate"
+          },
+          {
+            "key": "Salt Spray Resistance",
+            "value": "200 Hours (Standard ASTM B117)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Video & Audio",
         "items": [
-          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
-          { "key": "Maximum Frame Rate", "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080", "customizable": false },
-          { "key": "Maximum Streams", "value": "3 simultaneous streams (Up to 8 configurable profiles)", "customizable": false }
+          {
+            "key": "Compression",
+            "value": "H.265, H.264, MJPEG",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Frame Rate",
+            "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Streams",
+            "value": "3 simultaneous streams (Up to 8 configurable profiles)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Network & Interface",
         "items": [
-          { "key": "Model Power Input Variant", "value": "MD8564-EH-V2 (PoE Power IEEE 802.3af Class 0)", "customizable": true, "customKey": "powerVariant" },
-          { "key": "Users", "value": "Live viewing for up to 10 clients", "customizable": false },
-          { "key": "Security", "value": "IEEE 802.1x, Signed firmware, HTTPS, Digest authentication, Audit log", "customizable": false },
-          { "key": "Interface & PoE Connector", "value": "Single HL3 cable with M12 D-Coded 4-pin", "customizable": true, "customKey": "connectorType" },
-          { "key": "ONVIF", "value": "Profile G, S, T supported", "customizable": false }
+          {
+            "key": "Model Power Input Variant",
+            "value": "MD8564-EH-V2 (PoE Power IEEE 802.3af Class 0)",
+            "customizable": true,
+            "customKey": "powerVariant"
+          },
+          {
+            "key": "Users",
+            "value": "Live viewing for up to 10 clients",
+            "customizable": false
+          },
+          {
+            "key": "Security",
+            "value": "IEEE 802.1x, Signed firmware, HTTPS, Digest authentication, Audit log",
+            "customizable": false
+          },
+          {
+            "key": "Interface & PoE Connector",
+            "value": "Single HL3 cable with M12 D-Coded 4-pin",
+            "customizable": true,
+            "customKey": "connectorType"
+          },
+          {
+            "key": "ONVIF",
+            "value": "Profile G, S, T supported",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "AI Analytics & Integration",
         "items": [
-          { "key": "Compute Capability", "value": "SoC with built-in hardware deep learning accelerator", "customizable": false },
-          { "key": "AI Package / Solution", "value": "Trend Micro (3-year free trial), Onboard AI (Smart Motion Detection)", "customizable": false }
+          {
+            "key": "Compute Capability",
+            "value": "SoC with built-in hardware deep learning accelerator",
+            "customizable": false
+          },
+          {
+            "key": "AI Package / Solution",
+            "value": "Trend Micro (3-year free trial), Onboard AI (Smart Motion Detection)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "General & Environmental",
         "items": [
-          { "key": "Power Input", "value": "Camera: IEEE 802.3af PoE Class 0 (EH) / DC 12V (DEH)", "customizable": false },
-          { "key": "Casing & IP Rating", "value": "IP68, IP6K9K, NEMA 4X, IK10+ with AR-coated glass", "customizable": false },
-          { "key": "Certifications", "value": "Railway: EN 50155: 2021, EN 50121, EN 45545-2 / Auto: ECE R118", "customizable": false },
-          { "key": "Operating Temperature", "value": "-40°C ~ 70°C (-40°F ~ 158°F)", "customizable": false }
+          {
+            "key": "Power Input",
+            "value": "Camera: IEEE 802.3af PoE Class 0 (EH) / DC 24V (DEH)",
+            "customizable": false
+          },
+          {
+            "key": "Casing & IP Rating",
+            "value": "IP68, IP6K9K, NEMA 4X, IK10+ with AR-coated glass",
+            "customizable": false
+          },
+          {
+            "key": "Certifications",
+            "value": "Railway: EN 50155: 2021, EN 50121, EN 45545-2 / Auto: ECE R118",
+            "customizable": false
+          },
+          {
+            "key": "Operating Temperature",
+            "value": "-40°C ~ 70°C (-40°F ~ 158°F)",
+            "customizable": false
+          }
         ]
       }
     ],
@@ -253,8 +758,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Model Power Input Variant",
         "defaultOption": "eh",
         "options": [
-          { "id": "eh", "name": "MD8564-EH-V2 [PoE Power] (IEEE 802.3af Class 0)", "pnCode": "", "specValue": "MD8564-EH-V2 (PoE Power, IEEE 802.3af Class 0)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "deh", "name": "MD8564-DEH-V2 [DC Power] (DC 12V Power Input)", "pnCode": "", "specValue": "MD8564-DEH-V2 (DC 12V Power Input)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 }
+          {
+            "id": "eh",
+            "name": "MD8564-EH-V2 [PoE Power] (IEEE 802.3af Class 0)",
+            "pnCode": "",
+            "specValue": "MD8564-EH-V2 (PoE Power, IEEE 802.3af Class 0)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "deh",
+            "name": "MD8564-DEH-V2 [DC Power] (DC 24V Power Input)",
+            "pnCode": "",
+            "specValue": "MD8564-DEH-V2 (DC 24V Power Input)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          }
         ]
       },
       "firmwareOption": {
@@ -263,8 +784,25 @@ window.PRODUCTS_DATA = [
         "targetKey": "Firmware Version / Feature",
         "defaultOption": "standard",
         "options": [
-          { "id": "standard", "name": "Standard (Factory Default Firmware)", "pnCode": "", "specValue": "Standard Factory Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "customized", "name": "Customized Firmware (Client Specified)", "pnCode": "", "specValue": "Customized Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10, "requiresCustomInput": true }
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "pnCode": "",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "pnCode": "",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true
+          }
         ]
       },
       "focalLength": {
@@ -273,11 +811,51 @@ window.PRODUCTS_DATA = [
         "targetKey": "Focal Length",
         "defaultOption": "3.6mm",
         "options": [
-          { "id": "3.6mm", "name": "3.6 mm (Standard 83° FOV)", "pnCode": "640027800G", "specValue": "f = 3.6 mm (Standard 83° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "6.0mm", "name": "6.0 mm (Standard 52° FOV)", "pnCode": "640027400G", "specValue": "f = 6.0 mm (Standard 52° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "2.8mm", "name": "2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "N/A", "specValue": "f = 2.8 mm (Custom 105° H-FOV)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 },
-          { "id": "8.0mm", "name": "8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "N/A", "specValue": "f = 8.0 mm (Custom 38° H-FOV)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 },
-          { "id": "12.0mm", "name": "12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "N/A", "specValue": "f = 12.0 mm (Custom 25° H-FOV)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "3.6mm",
+            "name": "3.6 mm (Standard 83° FOV)",
+            "pnCode": "640027800G",
+            "specValue": "f = 3.6 mm (Standard 83° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "6.0mm",
+            "name": "6.0 mm (Standard 52° FOV)",
+            "pnCode": "640027400G",
+            "specValue": "f = 6.0 mm (Standard 52° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "2.8mm",
+            "name": "2.8 mm Ultra-Wide (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "N/A",
+            "specValue": "f = 2.8 mm (Custom 105° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          },
+          {
+            "id": "8.0mm",
+            "name": "8.0 mm Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "N/A",
+            "specValue": "f = 8.0 mm (Custom 38° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          },
+          {
+            "id": "12.0mm",
+            "name": "12.0 mm Long-Range Telephoto (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "N/A",
+            "specValue": "f = 12.0 mm (Custom 25° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "irIlluminator": {
@@ -286,9 +864,33 @@ window.PRODUCTS_DATA = [
         "targetKey": "IR Illuminators / Light",
         "defaultOption": "850nm",
         "options": [
-          { "id": "850nm", "name": "850nm IR Illuminators (Standard)", "pnCode": "", "specValue": "Built-in 850nm IR illuminators (effective up to 30m)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "940nm", "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in 940nm Covert Invisible IR illuminators", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 },
-          { "id": "white_led", "name": "White Light LED Illuminator (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in White Light LED illuminators for full color night vision", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "850nm",
+            "name": "850nm IR Illuminators (Standard)",
+            "pnCode": "",
+            "specValue": "Built-in 850nm IR illuminators (effective up to 30m)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "940nm",
+            "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in 940nm Covert Invisible IR illuminators",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          },
+          {
+            "id": "white_led",
+            "name": "White Light LED Illuminator (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in White Light LED illuminators for full color night vision",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "casingColor": {
@@ -297,9 +899,34 @@ window.PRODUCTS_DATA = [
         "targetKey": "Body Paint Color",
         "defaultOption": "ral9011",
         "options": [
-          { "id": "ral9011", "name": "RAL 9011 Graphite Black (Standard)", "pnCode": "TBD", "specValue": "RAL 9011 Graphite Black (Standard)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "ral9003", "name": "RAL 9003 Signal White (Addon: +$20 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "RAL 9003 Signal White", "addonPrice": 20, "nreFee": 0, "moqImpact": 200 },
-          { "id": "custom_color", "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "Custom RAL Color", "addonPrice": 35, "nreFee": 0, "moqImpact": 200, "requiresCustomInput": true }
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Standard)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9011 Graphite Black (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Addon: +$20 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9003 Signal White",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true
+          }
         ]
       },
       "glossLevel": {
@@ -308,8 +935,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Gloss Level",
         "defaultOption": "gu10_20",
         "options": [
-          { "id": "gu10_20", "name": "GU 10~20 Matt Finish (Standard)", "pnCode": "", "specValue": "GU 10~20 (Matt Finish)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "gu60_80", "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)", "pnCode": "", "specValue": "GU 60~80 (Semi-Gloss Finish)", "addonPrice": 45, "nreFee": 6000, "moqImpact": 200 }
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "pnCode": "",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "pnCode": "",
+            "specValue": "GU 60~80 (Semi-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200
+          }
         ]
       },
       "colorSamplePlate": {
@@ -318,8 +961,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "A5 Color Sample Plate",
         "defaultOption": "none",
         "options": [
-          { "id": "none", "name": "No Sample Plate Required", "pnCode": "", "specValue": "Not Required", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "a5_sample_5pcs", "name": "A5 Color Sample Plate (NRE: $600 USD)", "pnCode": "", "specValue": "A5 Color Sample Plate (5 pcs set)", "addonPrice": 0, "nreFee": 600, "moqImpact": 10 }
+          {
+            "id": "none",
+            "name": "No Sample Plate Required",
+            "pnCode": "",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate (NRE: $600 USD)",
+            "pnCode": "",
+            "specValue": "A5 Color Sample Plate (5 pcs set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10
+          }
         ]
       },
       "connectorType": {
@@ -328,9 +987,59 @@ window.PRODUCTS_DATA = [
         "targetKey": "Interface & PoE Connector",
         "defaultOption": "m12_4pin",
         "options": [
-          { "id": "m12_4pin", "name": "M12 D-Coded 4-pin (Standard)", "pnCode": "", "specValue": "Single HL3 cable with M12 D-Coded 4-pin", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "m12_8pin_xcode", "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "Single HL3 cable with M12 X-Code 8-pin", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 },
-          { "id": "harting_push_pull", "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "Single HL3 cable with Harting Push & Pull connector", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 }
+          {
+            "id": "m12_4pin",
+            "name": "M12 D-Coded 4-pin (Standard)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with M12 D-Coded 4-pin",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with M12 X-Code 8-pin",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          },
+          {
+            "id": "harting_push_pull",
+            "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with Harting Push & Pull connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          }
+        ]
+      },
+      "dedicatedPN": {
+        "label": "Dedicated System Part Number",
+        "targetCategory": "System Information",
+        "targetKey": "Dedicated System Part Number",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "Standard Configuration (No Dedicated P/N)",
+            "pnCode": "",
+            "specValue": "Standard Configuration (No Dedicated P/N)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "dedicated_pn",
+            "name": "Dedicated P/N Creation (Recommended for repeat orders) [NRE: $2,500 USD]",
+            "pnCode": "",
+            "specValue": "Dedicated P/N Creation (Recommended for repeat orders)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       }
     }
@@ -343,63 +1052,187 @@ window.PRODUCTS_DATA = [
     "category": "Indoor Mobile Dome",
     "basePN": "1002-MD9560-V20",
     "baseMOQ": 10,
-    "description": "2MP Mobile Dome Network Camera for transit saloons. Official VIVOTEK standard product available in MD9560-H-V2 (PoE Power) and MD9560-DH-V2 (DC 7.5~48V Power). Features 1080p @ 60fps, 2.4mm/2.8mm/3.6mm/6.0mm fixed lens, TPM security, EN 50155, EN 45545-2 & ECE R118 certification.",
+    "description": "2MP Mobile Dome Network Camera for transit saloons. Official VIVOTEK standard product available in MD9560-H-V2 (PoE Power) and MD9560-DH-V2 (DC 24V Power). Features 1080p @ 60fps, 2.4mm/2.8mm/3.6mm/6.0mm fixed lens, TPM security, EN 50155, EN 45545-2 & ECE R118 certification.",
     "specifications": [
       {
         "category": "System Information",
         "items": [
-          { "key": "CPU", "value": "Multimedia SoC (System-on-Chip)", "customizable": false },
-          { "key": "Flash", "value": "256MB", "customizable": false },
-          { "key": "RAM", "value": "512MB", "customizable": false },
-          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+          {
+            "key": "CPU",
+            "value": "Multimedia SoC (System-on-Chip)",
+            "customizable": false
+          },
+          {
+            "key": "Flash",
+            "value": "256MB",
+            "customizable": false
+          },
+          {
+            "key": "RAM",
+            "value": "512MB",
+            "customizable": false
+          },
+          {
+            "key": "Firmware Version / Feature",
+            "value": "Standard Factory Firmware",
+            "customizable": true,
+            "customKey": "firmwareOption"
+          },
+          {
+            "key": "Dedicated System Part Number",
+            "value": "Standard Configuration (No Dedicated P/N)",
+            "customizable": true,
+            "customKey": "dedicatedPN"
+          }
         ]
       },
       {
         "category": "Camera Specifications",
         "items": [
-          { "key": "Image Sensor", "value": "1/2.8\" Progressive CMOS", "customizable": false },
-          { "key": "Max. Resolution", "value": "1920x1080 (2MP @ 60fps)", "customizable": false },
-          { "key": "Lens Type", "value": "Fixed-focal", "customizable": false },
-          { "key": "Focal Length", "value": "f = 2.8 mm (114° H-FOV)", "customizable": true, "customKey": "focalLength" },
-          { "key": "Aperture", "value": "F2.0", "customizable": false },
-          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
-          { "key": "Day/Night & IR Filter", "value": "Yes, Removable IR-cut filter", "customizable": false },
-          { "key": "IR Illuminators / Light", "value": "Built-in IR illuminators (20m Smart IR, IR LED x2)", "customizable": true, "customKey": "irIlluminator" },
-          { "key": "Minimum Illumination", "value": "0.13 Lux @ F1.8 (Color), 0.01 Lux @ F1.8 (B/W), 0 Lux IR ON", "customizable": false },
-          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording", "customizable": false }
+          {
+            "key": "Image Sensor",
+            "value": "1/2.8\" Progressive CMOS",
+            "customizable": false
+          },
+          {
+            "key": "Max. Resolution",
+            "value": "1920x1080 (2MP @ 60fps)",
+            "customizable": false
+          },
+          {
+            "key": "Lens Type",
+            "value": "Fixed-focal",
+            "customizable": false
+          },
+          {
+            "key": "Focal Length",
+            "value": "f = 2.8 mm (114° H-FOV)",
+            "customizable": true,
+            "customKey": "focalLength"
+          },
+          {
+            "key": "Aperture",
+            "value": "F2.0",
+            "customizable": false
+          },
+          {
+            "key": "WDR Technology",
+            "value": "WDR Pro (120dB)",
+            "customizable": false
+          },
+          {
+            "key": "Day/Night & IR Filter",
+            "value": "Yes, Removable IR-cut filter",
+            "customizable": false
+          },
+          {
+            "key": "IR Illuminators / Light",
+            "value": "Built-in IR illuminators (20m Smart IR, IR LED x2)",
+            "customizable": true,
+            "customKey": "irIlluminator"
+          },
+          {
+            "key": "Minimum Illumination",
+            "value": "0.13 Lux @ F1.8 (Color), 0.01 Lux @ F1.8 (B/W), 0 Lux IR ON",
+            "customizable": false
+          },
+          {
+            "key": "Storage Slot",
+            "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Housing Paint & Coating Finish",
         "items": [
-          { "key": "Body Paint Color", "value": "RAL 9003 Signal White (Standard)", "customizable": true, "customKey": "casingColor" },
-          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
-          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" }
+          {
+            "key": "Body Paint Color",
+            "value": "RAL 9003 Signal White (Standard)",
+            "customizable": true,
+            "customKey": "casingColor"
+          },
+          {
+            "key": "Gloss Level",
+            "value": "GU 10~20 Matt Finish (Standard)",
+            "customizable": true,
+            "customKey": "glossLevel"
+          },
+          {
+            "key": "A5 Color Sample Plate",
+            "value": "Not Required",
+            "customizable": true,
+            "customKey": "colorSamplePlate"
+          }
         ]
       },
       {
         "category": "Video & Audio",
         "items": [
-          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
-          { "key": "Maximum Frame Rate", "value": "60 fps @ 1920x1080", "customizable": false },
-          { "key": "Audio Capability", "value": "One-way Audio with Built-in Microphone & Ext Mic Input (5m range)", "customizable": true, "customKey": "audioOption" }
+          {
+            "key": "Compression",
+            "value": "H.265, H.264, MJPEG",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Frame Rate",
+            "value": "60 fps @ 1920x1080",
+            "customizable": false
+          },
+          {
+            "key": "Audio Capability",
+            "value": "One-way Audio with Built-in Microphone & Ext Mic Input (5m range)",
+            "customizable": true,
+            "customKey": "audioOption"
+          }
         ]
       },
       {
         "category": "Network & Interface",
         "items": [
-          { "key": "Model Power Input Variant", "value": "MD9560-H-V2 (PoE Power IEEE 802.3af Class 0)", "customizable": true, "customKey": "powerVariant" },
-          { "key": "Cable Fire Safety Rating", "value": "Standard EN 45545 Fire-Resistant Railway Cable", "customizable": true, "customKey": "cableRating" },
-          { "key": "Interface & PoE Connector", "value": "10Base-T/100 BaseTX Ethernet (M12 Female 4-pin D-coded)", "customizable": true, "customKey": "connectorType" },
-          { "key": "Cybersecurity & Hardware", "value": "TPM (FIPS 140-2 Compatible), IEC 62443-4-2, Trend Micro IoT Security", "customizable": false },
-          { "key": "ONVIF", "value": "Profile G, S, T supported", "customizable": false }
+          {
+            "key": "Model Power Input Variant",
+            "value": "MD9560-H-V2 (PoE Power IEEE 802.3af Class 0)",
+            "customizable": true,
+            "customKey": "powerVariant"
+          },
+          {
+            "key": "Cable Fire Safety Rating",
+            "value": "Standard EN 45545 Fire-Resistant Railway Cable",
+            "customizable": true,
+            "customKey": "cableRating"
+          },
+          {
+            "key": "Interface & PoE Connector",
+            "value": "10Base-T/100 BaseTX Ethernet (M12 Female 4-pin D-coded)",
+            "customizable": true,
+            "customKey": "connectorType"
+          },
+          {
+            "key": "Cybersecurity & Hardware",
+            "value": "TPM (FIPS 140-2 Compatible), IEC 62443-4-2, Trend Micro IoT Security",
+            "customizable": false
+          },
+          {
+            "key": "ONVIF",
+            "value": "Profile G, S, T supported",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "General & Environmental",
         "items": [
-          { "key": "Casing Rating", "value": "IP67, IP66, IK10, NEMA 4X", "customizable": false },
-          { "key": "Certifications", "value": "EN 50155:2021 (OT1), EN 50121-3-2, EN 45545-2, ECE R118, ECE R10", "customizable": false }
+          {
+            "key": "Casing Rating",
+            "value": "IP67, IP66, IK10, NEMA 4X",
+            "customizable": false
+          },
+          {
+            "key": "Certifications",
+            "value": "EN 50155:2021 (OT1), EN 50121-3-2, EN 45545-2, ECE R118, ECE R10",
+            "customizable": false
+          }
         ]
       }
     ],
@@ -410,8 +1243,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Audio Capability",
         "defaultOption": "audio_enabled",
         "options": [
-          { "id": "audio_enabled", "name": "Built-in Audio Function Enabled (Standard)", "pnCode": "", "specValue": "One-way Audio with Built-in Microphone & Ext Mic Input (5m range)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "no_audio", "name": "Remove Audio Function (NRE: $2,500 / MOQ: 20 pcs)", "pnCode": "", "specValue": "Audio Function Removed (No Microphone / No Audio Input)", "addonPrice": 0, "nreFee": 2500, "moqImpact": 20 }
+          {
+            "id": "audio_enabled",
+            "name": "Built-in Audio Function Enabled (Standard)",
+            "pnCode": "",
+            "specValue": "One-way Audio with Built-in Microphone & Ext Mic Input (5m range)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "no_audio",
+            "name": "Remove Audio Function (NRE: $2,500 / MOQ: 20 pcs)",
+            "pnCode": "",
+            "specValue": "Audio Function Removed (No Microphone / No Audio Input)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       },
       "powerVariant": {
@@ -420,8 +1269,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Model Power Input Variant",
         "defaultOption": "poe",
         "options": [
-          { "id": "poe", "name": "MD9560-H-V2 [PoE Power] (IEEE 802.3af Class 0)", "pnCode": "", "specValue": "MD9560-H-V2 (IEEE 802.3af PoE Class 0 Standard)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "dc_power", "name": "MD9560-DH-V2 [DC Power] (DC 7.5V ~ 48V Power Input)", "pnCode": "", "specValue": "MD9560-DH-V2 (DC 7.5V ~ 48V Power Input)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 }
+          {
+            "id": "poe",
+            "name": "MD9560-H-V2 [PoE Power] (IEEE 802.3af Class 0)",
+            "pnCode": "",
+            "specValue": "MD9560-H-V2 (IEEE 802.3af PoE Class 0 Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "dc_power",
+            "name": "MD9560-DH-V2 [DC Power] (DC 24V Power Input)",
+            "pnCode": "",
+            "specValue": "MD9560-DH-V2 (DC 24V Power Input)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          }
         ]
       },
       "firmwareOption": {
@@ -430,8 +1295,25 @@ window.PRODUCTS_DATA = [
         "targetKey": "Firmware Version / Feature",
         "defaultOption": "standard",
         "options": [
-          { "id": "standard", "name": "Standard (Factory Default Firmware)", "pnCode": "", "specValue": "Standard Factory Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "customized", "name": "Customized Firmware (Client Specified)", "pnCode": "", "specValue": "Customized Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10, "requiresCustomInput": true }
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "pnCode": "",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "pnCode": "",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true
+          }
         ]
       },
       "focalLength": {
@@ -440,10 +1322,42 @@ window.PRODUCTS_DATA = [
         "targetKey": "Focal Length",
         "defaultOption": "2.8mm",
         "options": [
-          { "id": "2.4mm", "name": "2.4 mm Ultra-Wide Lens (No IR Illuminator Variant)", "pnCode": "5050216400", "specValue": "f = 2.4 mm (Ultra-Wide, No IR Illuminator)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "2.8mm", "name": "2.8 mm (Standard 114° Wide FOV)", "pnCode": "5050216300", "specValue": "f = 2.8 mm (Standard 114° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "3.6mm", "name": "3.6 mm (Standard 83° FOV)", "pnCode": "5050090800", "specValue": "f = 3.6 mm (Standard 83° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "6.0mm", "name": "6.0 mm (Standard 52° FOV)", "pnCode": "5050094300", "specValue": "f = 6.0 mm (Standard 52° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 }
+          {
+            "id": "2.4mm",
+            "name": "2.4 mm Ultra-Wide Lens (No IR Illuminator Variant)",
+            "pnCode": "5050216400",
+            "specValue": "f = 2.4 mm (Ultra-Wide, No IR Illuminator)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "2.8mm",
+            "name": "2.8 mm (Standard 114° Wide FOV)",
+            "pnCode": "5050216300",
+            "specValue": "f = 2.8 mm (Standard 114° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "3.6mm",
+            "name": "3.6 mm (Standard 83° FOV)",
+            "pnCode": "5050090800",
+            "specValue": "f = 3.6 mm (Standard 83° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "6.0mm",
+            "name": "6.0 mm (Standard 52° FOV)",
+            "pnCode": "5050094300",
+            "specValue": "f = 6.0 mm (Standard 52° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          }
         ]
       },
       "irIlluminator": {
@@ -452,9 +1366,33 @@ window.PRODUCTS_DATA = [
         "targetKey": "IR Illuminators / Light",
         "defaultOption": "smart_ir",
         "options": [
-          { "id": "smart_ir", "name": "Built-in Smart IR (20m Standard)", "pnCode": "", "specValue": "Built-in IR illuminators (20m Smart IR, IR LED x2)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "no_ir", "name": "No IR Illuminator (Required for 2.4mm Lens)", "pnCode": "", "specValue": "No IR Illuminator (2.4mm Lens Variant)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "940nm", "name": "940nm Invisible Covert IR (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in 940nm Covert Invisible IR", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "smart_ir",
+            "name": "Built-in Smart IR (20m Standard)",
+            "pnCode": "",
+            "specValue": "Built-in IR illuminators (20m Smart IR, IR LED x2)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "no_ir",
+            "name": "No IR Illuminator (Required for 2.4mm Lens)",
+            "pnCode": "",
+            "specValue": "No IR Illuminator (2.4mm Lens Variant)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "940nm",
+            "name": "940nm Invisible Covert IR (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in 940nm Covert Invisible IR",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "cableRating": {
@@ -463,8 +1401,33 @@ window.PRODUCTS_DATA = [
         "targetKey": "Cable Fire Safety Rating",
         "defaultOption": "std_cable",
         "options": [
-          { "id": "std_cable", "name": "Standard Fire-Resistant Cable (EN 45545 Certified)", "pnCode": "3082644400", "specValue": "Standard EN 45545 Certified Fire-Resistant Railway Cable", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "hl3_cable", "name": "HL3 High Fire Safety Cable (EN 45545-2 HL3)", "pnCode": "TBD", "specValue": "HL3 High Fire Safety Railway Cable (EN 45545-2 HL3)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 }
+          {
+            "id": "std_cable",
+            "name": "Standard Fire-Resistant Cable (EN 45545 Certified)",
+            "pnCode": "3082644400",
+            "specValue": "Standard EN 45545 Certified Fire-Resistant Railway Cable",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "hl3_cable",
+            "name": "HL3 High Fire Safety Cable (EN 45545-2 HL3)",
+            "pnCode": "TBD",
+            "specValue": "HL3 High Fire Safety Railway Cable (EN 45545-2 HL3)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "nfpa140_cable",
+            "name": "NFPA-140 Certified Fireproof M12 Cable (Addon: + / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "NFPA-140 Certified Fireproof Railway M12 Cable",
+            "addonPrice": 18,
+            "nreFee": 0,
+            "moqImpact": 200
+          }
         ]
       },
       "casingColor": {
@@ -473,9 +1436,34 @@ window.PRODUCTS_DATA = [
         "targetKey": "Body Paint Color",
         "defaultOption": "ral9003",
         "options": [
-          { "id": "ral9003", "name": "RAL 9003 Signal White (Standard)", "pnCode": "TBD", "specValue": "RAL 9003 Signal White (Standard)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "ral9011", "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "RAL 9011 Graphite Black", "addonPrice": 20, "nreFee": 0, "moqImpact": 200 },
-          { "id": "custom_color", "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "Custom RAL Color", "addonPrice": 35, "nreFee": 0, "moqImpact": 200, "requiresCustomInput": true }
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Standard)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9003 Signal White (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9011 Graphite Black",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true
+          }
         ]
       },
       "glossLevel": {
@@ -484,8 +1472,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Gloss Level",
         "defaultOption": "gu10_20",
         "options": [
-          { "id": "gu10_20", "name": "GU 10~20 Matt Finish (Standard)", "pnCode": "", "specValue": "GU 10~20 (Matt Finish)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "gu60_80", "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)", "pnCode": "", "specValue": "GU 60~80 (Semi-Gloss Finish)", "addonPrice": 45, "nreFee": 6000, "moqImpact": 200 }
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "pnCode": "",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "pnCode": "",
+            "specValue": "GU 60~80 (Semi-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200
+          }
         ]
       },
       "colorSamplePlate": {
@@ -494,8 +1498,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "A5 Color Sample Plate",
         "defaultOption": "none",
         "options": [
-          { "id": "none", "name": "No Sample Plate Required", "pnCode": "", "specValue": "Not Required", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "a5_sample_5pcs", "name": "A5 Color Sample Plate (NRE: $600 USD)", "pnCode": "", "specValue": "A5 Color Sample Plate (5 pcs set)", "addonPrice": 0, "nreFee": 600, "moqImpact": 10 }
+          {
+            "id": "none",
+            "name": "No Sample Plate Required",
+            "pnCode": "",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate (NRE: $600 USD)",
+            "pnCode": "",
+            "specValue": "A5 Color Sample Plate (5 pcs set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10
+          }
         ]
       },
       "connectorType": {
@@ -504,8 +1524,50 @@ window.PRODUCTS_DATA = [
         "targetKey": "Interface & PoE Connector",
         "defaultOption": "m12_4pin",
         "options": [
-          { "id": "m12_4pin", "name": "M12 D-Coded 4-pin (Standard)", "pnCode": "", "specValue": "M12 Female 4-pin D-coded", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "m12_8pin_xcode", "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "M12 X-Code 8-pin", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 }
+          {
+            "id": "m12_4pin",
+            "name": "M12 D-Coded 4-pin (Standard)",
+            "pnCode": "",
+            "specValue": "M12 Female 4-pin D-coded",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "M12 X-Code 8-pin",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          }
+        ]
+      },
+      "dedicatedPN": {
+        "label": "Dedicated System Part Number",
+        "targetCategory": "System Information",
+        "targetKey": "Dedicated System Part Number",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "Standard Configuration (No Dedicated P/N)",
+            "pnCode": "",
+            "specValue": "Standard Configuration (No Dedicated P/N)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "dedicated_pn",
+            "name": "Dedicated P/N Creation (Recommended for repeat orders) [NRE: $2,500 USD]",
+            "pnCode": "",
+            "specValue": "Dedicated P/N Creation (Recommended for repeat orders)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       }
     }
@@ -523,62 +1585,180 @@ window.PRODUCTS_DATA = [
       {
         "category": "System Information",
         "items": [
-          { "key": "CPU", "value": "Multimedia SoC with hardware deep learning accelerator", "customizable": false },
-          { "key": "Flash", "value": "1GB", "customizable": false },
-          { "key": "RAM", "value": "2GB", "customizable": false },
-          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+          {
+            "key": "CPU",
+            "value": "Multimedia SoC with hardware deep learning accelerator",
+            "customizable": false
+          },
+          {
+            "key": "Flash",
+            "value": "1GB",
+            "customizable": false
+          },
+          {
+            "key": "RAM",
+            "value": "2GB",
+            "customizable": false
+          },
+          {
+            "key": "Firmware Version / Feature",
+            "value": "Standard Factory Firmware",
+            "customizable": true,
+            "customKey": "firmwareOption"
+          },
+          {
+            "key": "Dedicated System Part Number",
+            "value": "Standard Configuration (No Dedicated P/N)",
+            "customizable": true,
+            "customKey": "dedicatedPN"
+          }
         ]
       },
       {
         "category": "Camera Specifications",
         "items": [
-          { "key": "Image Sensor", "value": "1/2.7\" Progressive CMOS", "customizable": false },
-          { "key": "Max. Resolution", "value": "2560x1920 (5MP @ 30fps / 1080p @ 60fps)", "customizable": false },
-          { "key": "Lens Type", "value": "Fixed Focal", "customizable": false },
-          { "key": "Focal Length", "value": "f = 2.8 mm (102° H-FOV)", "customizable": true, "customKey": "focalLength" },
-          { "key": "Aperture", "value": "F1.8", "customizable": false },
-          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
-          { "key": "IR Illuminators / Light", "value": "Built-in Smart IR illuminators (20m, IR LED x2)", "customizable": true, "customKey": "irIlluminator" },
-          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording", "customizable": false }
+          {
+            "key": "Image Sensor",
+            "value": "1/2.7\" Progressive CMOS",
+            "customizable": false
+          },
+          {
+            "key": "Max. Resolution",
+            "value": "2560x1920 (5MP @ 30fps / 1080p @ 60fps)",
+            "customizable": false
+          },
+          {
+            "key": "Lens Type",
+            "value": "Fixed Focal",
+            "customizable": false
+          },
+          {
+            "key": "Focal Length",
+            "value": "f = 2.8 mm (102° H-FOV)",
+            "customizable": true,
+            "customKey": "focalLength"
+          },
+          {
+            "key": "Aperture",
+            "value": "F1.8",
+            "customizable": false
+          },
+          {
+            "key": "WDR Technology",
+            "value": "WDR Pro (120dB)",
+            "customizable": false
+          },
+          {
+            "key": "IR Illuminators / Light",
+            "value": "Built-in Smart IR illuminators (20m, IR LED x2)",
+            "customizable": true,
+            "customKey": "irIlluminator"
+          },
+          {
+            "key": "Storage Slot",
+            "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Housing Paint & Coating Finish",
         "items": [
-          { "key": "Body Paint Color", "value": "RAL 9003 Signal White (Standard)", "customizable": true, "customKey": "casingColor" },
-          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
-          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" }
+          {
+            "key": "Body Paint Color",
+            "value": "RAL 9003 Signal White (Standard)",
+            "customizable": true,
+            "customKey": "casingColor"
+          },
+          {
+            "key": "Gloss Level",
+            "value": "GU 10~20 Matt Finish (Standard)",
+            "customizable": true,
+            "customKey": "glossLevel"
+          },
+          {
+            "key": "A5 Color Sample Plate",
+            "value": "Not Required",
+            "customizable": true,
+            "customKey": "colorSamplePlate"
+          }
         ]
       },
       {
         "category": "AI Analytics & Integration",
         "items": [
-          { "key": "AI Package / Solution", "value": "Deep Learning VCA (Smart Motion Detection, Smart VCA)", "customizable": false },
-          { "key": "Cybersecurity", "value": "Signed Firmware, Secure Boot, Trend Micro IoT Security, TPM", "customizable": false }
+          {
+            "key": "AI Package / Solution",
+            "value": "Deep Learning VCA (Smart Motion Detection, Smart VCA)",
+            "customizable": false
+          },
+          {
+            "key": "Cybersecurity",
+            "value": "Signed Firmware, Secure Boot, Trend Micro IoT Security, TPM",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Video & Audio",
         "items": [
-          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
-          { "key": "Maximum Frame Rate", "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080", "customizable": false },
-          { "key": "Audio Capability", "value": "One-way Audio with Built-in Microphone (5m range)", "customizable": false }
+          {
+            "key": "Compression",
+            "value": "H.265, H.264, MJPEG",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Frame Rate",
+            "value": "30 fps @ 2560x1920, 60 fps @ 1920x1080",
+            "customizable": false
+          },
+          {
+            "key": "Audio Capability",
+            "value": "One-way Audio with Built-in Microphone (5m range)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Network & Interface",
         "items": [
-          { "key": "Cable Fire Safety Rating", "value": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)", "customizable": true, "customKey": "cableRating" },
-          { "key": "Interface & PoE Connector", "value": "M12 4-pin D-coded Female connector (PoE 802.3af Class 2)", "customizable": true, "customKey": "connectorType" },
-          { "key": "Security", "value": "IEEE 802.1x, Digest authentication, HTTPS, Audit log", "customizable": false }
+          {
+            "key": "Cable Fire Safety Rating",
+            "value": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)",
+            "customizable": true,
+            "customKey": "cableRating"
+          },
+          {
+            "key": "Interface & PoE Connector",
+            "value": "M12 4-pin D-coded Female connector (PoE 802.3af Class 2)",
+            "customizable": true,
+            "customKey": "connectorType"
+          },
+          {
+            "key": "Security",
+            "value": "IEEE 802.1x, Digest authentication, HTTPS, Audit log",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "General & Environmental",
         "items": [
-          { "key": "Power Input", "value": "IEEE 802.3af PoE Class 2 (Max 6W IR ON / 4.5W IR OFF)", "customizable": false },
-          { "key": "Casing & IP Rating", "value": "IP66, IK10 Recessed Ceiling Panel Housing", "customizable": false },
-          { "key": "Certifications", "value": "EN 50155, EN 45545-2, ECE R118 Bus & Rail Certified", "customizable": false }
+          {
+            "key": "Power Input",
+            "value": "IEEE 802.3af PoE Class 2 (Max 6W IR ON / 4.5W IR OFF)",
+            "customizable": false
+          },
+          {
+            "key": "Casing & IP Rating",
+            "value": "IP66, IK10 Recessed Ceiling Panel Housing",
+            "customizable": false
+          },
+          {
+            "key": "Certifications",
+            "value": "EN 50155, EN 45545-2, ECE R118 Bus & Rail Certified",
+            "customizable": false
+          }
         ]
       }
     ],
@@ -589,8 +1769,25 @@ window.PRODUCTS_DATA = [
         "targetKey": "Firmware Version / Feature",
         "defaultOption": "standard",
         "options": [
-          { "id": "standard", "name": "Standard (Factory Default Firmware)", "pnCode": "", "specValue": "Standard Factory Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "customized", "name": "Customized Firmware (Client Specified)", "pnCode": "", "specValue": "Customized Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10, "requiresCustomInput": true }
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "pnCode": "",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "pnCode": "",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true
+          }
         ]
       },
       "focalLength": {
@@ -599,11 +1796,51 @@ window.PRODUCTS_DATA = [
         "targetKey": "Focal Length",
         "defaultOption": "2.8mm",
         "options": [
-          { "id": "2.4mm", "name": "2.4 mm Ultra-Wide (124° FOV, No IR) (Addon: +$10 / MOQ: 500 pcs)", "pnCode": "5050082500", "specValue": "f = 2.4 mm (Custom 124° H-FOV, No IR Illuminator)", "addonPrice": 10, "nreFee": 0, "moqImpact": 500 },
-          { "id": "2.8mm", "name": "2.8 mm (Standard 102° Wide FOV)", "pnCode": "640027700G", "specValue": "f = 2.8 mm (Standard 102° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "3.6mm", "name": "3.6 mm (Standard 83° FOV)", "pnCode": "640027800G", "specValue": "f = 3.6 mm (Standard 83° H-FOV)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "6.0mm", "name": "6.0 mm Narrow (50° FOV) (Addon: +$10 / MOQ: 500 pcs)", "pnCode": "640027400G", "specValue": "f = 6.0 mm (Custom 50° H-FOV)", "addonPrice": 10, "nreFee": 0, "moqImpact": 500 },
-          { "id": "8.0mm", "name": "8.0 mm Telephoto (38° FOV) (Addon: +$10 / MOQ: 500 pcs)", "pnCode": "5050081900", "specValue": "f = 8.0 mm (Custom 38° H-FOV)", "addonPrice": 10, "nreFee": 0, "moqImpact": 500 }
+          {
+            "id": "2.4mm",
+            "name": "2.4 mm Ultra-Wide (124° FOV, No IR) (Addon: +$10 / MOQ: 500 pcs)",
+            "pnCode": "5050082500",
+            "specValue": "f = 2.4 mm (Custom 124° H-FOV, No IR Illuminator)",
+            "addonPrice": 10,
+            "nreFee": 0,
+            "moqImpact": 500
+          },
+          {
+            "id": "2.8mm",
+            "name": "2.8 mm (Standard 102° Wide FOV)",
+            "pnCode": "640027700G",
+            "specValue": "f = 2.8 mm (Standard 102° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "3.6mm",
+            "name": "3.6 mm (Standard 83° FOV)",
+            "pnCode": "640027800G",
+            "specValue": "f = 3.6 mm (Standard 83° H-FOV)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "6.0mm",
+            "name": "6.0 mm Narrow (50° FOV) (Addon: +$10 / MOQ: 500 pcs)",
+            "pnCode": "640027400G",
+            "specValue": "f = 6.0 mm (Custom 50° H-FOV)",
+            "addonPrice": 10,
+            "nreFee": 0,
+            "moqImpact": 500
+          },
+          {
+            "id": "8.0mm",
+            "name": "8.0 mm Telephoto (38° FOV) (Addon: +$10 / MOQ: 500 pcs)",
+            "pnCode": "5050081900",
+            "specValue": "f = 8.0 mm (Custom 38° H-FOV)",
+            "addonPrice": 10,
+            "nreFee": 0,
+            "moqImpact": 500
+          }
         ]
       },
       "irIlluminator": {
@@ -612,9 +1849,33 @@ window.PRODUCTS_DATA = [
         "targetKey": "IR Illuminators / Light",
         "defaultOption": "smart_ir",
         "options": [
-          { "id": "smart_ir", "name": "Built-in Smart IR (20m Standard)", "pnCode": "", "specValue": "Built-in 20m Smart IR (x2 IR LEDs)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "no_ir", "name": "No IR Illuminator (Required for 2.4mm Lens)", "pnCode": "", "specValue": "No IR Illuminator (2.4mm Lens Variant)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "940nm", "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in 940nm Covert Invisible IR (15m)", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "smart_ir",
+            "name": "Built-in Smart IR (20m Standard)",
+            "pnCode": "",
+            "specValue": "Built-in 20m Smart IR (x2 IR LEDs)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "no_ir",
+            "name": "No IR Illuminator (Required for 2.4mm Lens)",
+            "pnCode": "",
+            "specValue": "No IR Illuminator (2.4mm Lens Variant)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "940nm",
+            "name": "940nm Covert Invisible IR (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in 940nm Covert Invisible IR (15m)",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "casingColor": {
@@ -623,9 +1884,34 @@ window.PRODUCTS_DATA = [
         "targetKey": "Body Paint Color",
         "defaultOption": "ral9003",
         "options": [
-          { "id": "ral9003", "name": "RAL 9003 Signal White (Standard)", "pnCode": "TBD", "specValue": "RAL 9003 Signal White (Standard)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "ral9011", "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "RAL 9011 Graphite Black", "addonPrice": 20, "nreFee": 0, "moqImpact": 200 },
-          { "id": "custom_color", "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "Custom RAL Color", "addonPrice": 35, "nreFee": 0, "moqImpact": 200, "requiresCustomInput": true }
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Standard)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9003 Signal White (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9011 Graphite Black",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true
+          }
         ]
       },
       "glossLevel": {
@@ -634,8 +1920,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Gloss Level",
         "defaultOption": "gu10_20",
         "options": [
-          { "id": "gu10_20", "name": "GU 10~20 Matt Finish (Standard)", "pnCode": "", "specValue": "GU 10~20 (Matt Finish)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "gu60_80", "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)", "pnCode": "", "specValue": "GU 60~80 (Semi-Gloss Finish)", "addonPrice": 45, "nreFee": 6000, "moqImpact": 200 }
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "pnCode": "",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "pnCode": "",
+            "specValue": "GU 60~80 (Semi-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200
+          }
         ]
       },
       "colorSamplePlate": {
@@ -644,8 +1946,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "A5 Color Sample Plate",
         "defaultOption": "none",
         "options": [
-          { "id": "none", "name": "No Sample Plate Required", "pnCode": "", "specValue": "Not Required", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "a5_sample_5pcs", "name": "A5 Color Sample Plate (NRE: $600 USD)", "pnCode": "", "specValue": "A5 Color Sample Plate (5 pcs set)", "addonPrice": 0, "nreFee": 600, "moqImpact": 10 }
+          {
+            "id": "none",
+            "name": "No Sample Plate Required",
+            "pnCode": "",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate (NRE: $600 USD)",
+            "pnCode": "",
+            "specValue": "A5 Color Sample Plate (5 pcs set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10
+          }
         ]
       },
       "cableRating": {
@@ -654,8 +1972,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Interface & PoE Connector",
         "defaultOption": "hl3_poe",
         "options": [
-          { "id": "hl3_poe", "name": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)", "pnCode": "TBD", "specValue": "M12 Female 4-pin D-coded with HL3 PoE Cable", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "hl1_std", "name": "HL1 Cable (EN 45545-2 Indoor Railway Rating)", "pnCode": "631440200Z", "specValue": "M12 Female 4-pin D-coded with HL1 Cable", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 }
+          {
+            "id": "hl3_poe",
+            "name": "HL3 Cable POE (EN 45545-2 Highest Railway Rating)",
+            "pnCode": "TBD",
+            "specValue": "M12 Female 4-pin D-coded with HL3 PoE Cable",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "hl1_std",
+            "name": "Standard Fireproof Cable (EN 45545 Certified Cable)",
+            "pnCode": "631440200Z",
+            "specValue": "M12 Female 4-pin D-coded with Standard Fireproof Cable",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          }
         ]
       },
       "connectorType": {
@@ -664,9 +1998,59 @@ window.PRODUCTS_DATA = [
         "targetKey": "Interface & PoE Connector",
         "defaultOption": "m12_4pin",
         "options": [
-          { "id": "m12_4pin", "name": "M12 D-Coded 4-pin (Standard)", "pnCode": "", "specValue": "M12 Female 4-pin D-coded", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "m12_8pin_xcode", "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "M12 X-Code 8-pin", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 },
-          { "id": "harting_push_pull", "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "Single HL3 cable with Harting Push & Pull connector", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 }
+          {
+            "id": "m12_4pin",
+            "name": "M12 D-Coded 4-pin (Standard)",
+            "pnCode": "",
+            "specValue": "M12 Female 4-pin D-coded",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "M12 X-Code 8-pin",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          },
+          {
+            "id": "harting_push_pull",
+            "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with Harting Push & Pull connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          }
+        ]
+      },
+      "dedicatedPN": {
+        "label": "Dedicated System Part Number",
+        "targetCategory": "System Information",
+        "targetKey": "Dedicated System Part Number",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "Standard Configuration (No Dedicated P/N)",
+            "pnCode": "",
+            "specValue": "Standard Configuration (No Dedicated P/N)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "dedicated_pn",
+            "name": "Dedicated P/N Creation (Recommended for repeat orders) [NRE: $2,500 USD]",
+            "pnCode": "",
+            "specValue": "Dedicated P/N Creation (Recommended for repeat orders)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       }
     }
@@ -684,59 +2068,184 @@ window.PRODUCTS_DATA = [
       {
         "category": "System Information",
         "items": [
-          { "key": "CPU", "value": "Multimedia SoC with hardware deep learning accelerator", "customizable": false },
-          { "key": "Flash", "value": "8GB", "customizable": false },
-          { "key": "RAM", "value": "2GB", "customizable": false },
-          { "key": "Firmware Version / Feature", "value": "Standard Factory Firmware", "customizable": true, "customKey": "firmwareOption" }
+          {
+            "key": "CPU",
+            "value": "Multimedia SoC with hardware deep learning accelerator",
+            "customizable": false
+          },
+          {
+            "key": "Flash",
+            "value": "8GB",
+            "customizable": false
+          },
+          {
+            "key": "RAM",
+            "value": "2GB",
+            "customizable": false
+          },
+          {
+            "key": "Firmware Version / Feature",
+            "value": "Standard Factory Firmware",
+            "customizable": true,
+            "customKey": "firmwareOption"
+          },
+          {
+            "key": "Dedicated System Part Number",
+            "value": "Standard Configuration (No Dedicated P/N)",
+            "customizable": true,
+            "customKey": "dedicatedPN"
+          }
         ]
       },
       {
         "category": "Camera Specifications",
         "items": [
-          { "key": "Image Sensor", "value": "1/2.3\" Progressive CMOS", "customizable": false },
-          { "key": "Max. Resolution", "value": "2816x2816 (12MP @ 30fps WDR Off / 20fps WDR On)", "customizable": false },
-          { "key": "Lens Type", "value": "Fixed-focal Fisheye Lens", "customizable": false },
-          { "key": "Focal Length & Field of View", "value": "f = 1.22 mm (180° H/V/D Fisheye FOV)", "customizable": false },
-          { "key": "Aperture", "value": "F2.18", "customizable": false },
-          { "key": "WDR Technology", "value": "WDR Pro (120dB)", "customizable": false },
-          { "key": "Day/Night & IR Filter", "value": "Yes, Removable IR-cut filter", "customizable": false },
-          { "key": "IR Illuminators / Light", "value": "Built-in 940nm Covert Invisible IR (5m Smart IR II, IR LED x4)", "customizable": true, "customKey": "irIlluminator" },
-          { "key": "Minimum Illumination", "value": "0.1 Lux @ F2.18 (Color), <0.005 Lux @ F2.18 (B/W), 0 Lux IR ON", "customizable": false },
-          { "key": "Storage Slot", "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording (Up to 1TB)", "customizable": false }
+          {
+            "key": "Image Sensor",
+            "value": "1/2.3\" Progressive CMOS",
+            "customizable": false
+          },
+          {
+            "key": "Max. Resolution",
+            "value": "2816x2816 (12MP @ 30fps WDR Off / 20fps WDR On)",
+            "customizable": false
+          },
+          {
+            "key": "Lens Type",
+            "value": "Fixed-focal Fisheye Lens",
+            "customizable": false
+          },
+          {
+            "key": "Focal Length & Field of View",
+            "value": "f = 1.22 mm (180° H/V/D Fisheye FOV)",
+            "customizable": false
+          },
+          {
+            "key": "Aperture",
+            "value": "F2.18",
+            "customizable": false
+          },
+          {
+            "key": "WDR Technology",
+            "value": "WDR Pro (120dB)",
+            "customizable": false
+          },
+          {
+            "key": "Day/Night & IR Filter",
+            "value": "Yes, Removable IR-cut filter",
+            "customizable": false
+          },
+          {
+            "key": "IR Illuminators / Light",
+            "value": "Built-in 940nm Covert Invisible IR (5m Smart IR II, IR LED x4)",
+            "customizable": true,
+            "customKey": "irIlluminator"
+          },
+          {
+            "key": "Minimum Illumination",
+            "value": "0.1 Lux @ F2.18 (Color), <0.005 Lux @ F2.18 (B/W), 0 Lux IR ON",
+            "customizable": false
+          },
+          {
+            "key": "Storage Slot",
+            "value": "Micro SD/SDHC/SDXC card slot with Seamless Recording (Up to 1TB)",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "Housing Paint & Coating Finish",
         "items": [
-          { "key": "Body Paint Color", "value": "RAL 9003 Signal White (Standard)", "customizable": true, "customKey": "casingColor" },
-          { "key": "Gloss Level", "value": "GU 10~20 Matt Finish (Standard)", "customizable": true, "customKey": "glossLevel" },
-          { "key": "A5 Color Sample Plate", "value": "Not Required", "customizable": true, "customKey": "colorSamplePlate" }
+          {
+            "key": "Body Paint Color",
+            "value": "RAL 9003 Signal White (Standard)",
+            "customizable": true,
+            "customKey": "casingColor"
+          },
+          {
+            "key": "Gloss Level",
+            "value": "GU 10~20 Matt Finish (Standard)",
+            "customizable": true,
+            "customKey": "glossLevel"
+          },
+          {
+            "key": "A5 Color Sample Plate",
+            "value": "Not Required",
+            "customizable": true,
+            "customKey": "colorSamplePlate"
+          }
         ]
       },
       {
         "category": "Video & Audio",
         "items": [
-          { "key": "Compression", "value": "H.265, H.264, MJPEG", "customizable": false },
-          { "key": "Maximum Frame Rate", "value": "30 fps @ 2816x2816 (WDR off), 20 fps @ 2816x2816 (WDR on)", "customizable": false },
-          { "key": "Audio Capability", "value": "One-way Audio with Built-in Microphone (5m range)", "customizable": true, "customKey": "audioOption" }
+          {
+            "key": "Compression",
+            "value": "H.265, H.264, MJPEG",
+            "customizable": false
+          },
+          {
+            "key": "Maximum Frame Rate",
+            "value": "30 fps @ 2816x2816 (WDR off), 20 fps @ 2816x2816 (WDR on)",
+            "customizable": false
+          },
+          {
+            "key": "Audio Capability",
+            "value": "One-way Audio with Built-in Microphone (5m range)",
+            "customizable": true,
+            "customKey": "audioOption"
+          }
         ]
       },
       {
         "category": "Network & Interface",
         "items": [
-          { "key": "Cable Fire Safety Rating", "value": "HL3 High Fire Safety Cable (EN 45545-2 HL3)", "customizable": false },
-          { "key": "Interface & PoE Connector", "value": "Single HL3 cable with M12 D-Coded 4-pin Female connector (PoE 802.3at Class 4)", "customizable": true, "customKey": "connectorType" },
-          { "key": "Cybersecurity & Hardware", "value": "Signed Firmware, Secure Boot, Trend Micro IoT Security, TPM", "customizable": false },
-          { "key": "ONVIF", "value": "Profile G, S, T, M supported", "customizable": false }
+          {
+            "key": "Cable Fire Safety Rating",
+            "value": "HL3 High Fire Safety Cable (EN 45545-2 HL3)",
+            "customizable": false
+          },
+          {
+            "key": "Interface & PoE Connector",
+            "value": "Single HL3 cable with M12 D-Coded 4-pin Female connector (PoE 802.3at Class 4)",
+            "customizable": true,
+            "customKey": "connectorType"
+          },
+          {
+            "key": "Cybersecurity & Hardware",
+            "value": "Signed Firmware, Secure Boot, Trend Micro IoT Security, TPM",
+            "customizable": false
+          },
+          {
+            "key": "ONVIF",
+            "value": "Profile G, S, T, M supported",
+            "customizable": false
+          }
         ]
       },
       {
         "category": "General & Environmental",
         "items": [
-          { "key": "Power Input", "value": "IEEE 802.3at PoE Class 4 (Max 18W IR ON / 9.55W IR OFF)", "customizable": false },
-          { "key": "Casing & IP Rating", "value": "IP66, IP67, IK10, NEMA 4X", "customizable": false },
-          { "key": "Certifications", "value": "EN 50155:2021(OT4/ST1), EN 50121-3-2, EN 45545-2, ECE R118, ECE R10", "customizable": false },
-          { "key": "Operating Temperature", "value": "-40°C ~ 70°C (-40°F ~ 158°F)", "customizable": false }
+          {
+            "key": "Power Input",
+            "value": "IEEE 802.3at PoE Class 4 (Max 18W IR ON / 9.55W IR OFF)",
+            "customizable": false
+          },
+          {
+            "key": "Casing & IP Rating",
+            "value": "IP66, IP67, IK10, NEMA 4X",
+            "customizable": false
+          },
+          {
+            "key": "Certifications",
+            "value": "EN 50155:2021(OT4/ST1), EN 50121-3-2, EN 45545-2, ECE R118, ECE R10",
+            "customizable": false
+          },
+          {
+            "key": "Operating Temperature",
+            "value": "-40°C ~ 70°C (-40°F ~ 158°F)",
+            "customizable": false
+          }
         ]
       }
     ],
@@ -747,8 +2256,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Audio Capability",
         "defaultOption": "audio_enabled",
         "options": [
-          { "id": "audio_enabled", "name": "Built-in Audio Function Enabled (Standard)", "pnCode": "", "specValue": "One-way Audio with Built-in Microphone (5m range)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "no_audio", "name": "Remove Audio Function (NRE: $2,500 / MOQ: 20 pcs)", "pnCode": "", "specValue": "Audio Function Removed (No Microphone / No Audio Input)", "addonPrice": 0, "nreFee": 2500, "moqImpact": 20 }
+          {
+            "id": "audio_enabled",
+            "name": "Built-in Audio Function Enabled (Standard)",
+            "pnCode": "",
+            "specValue": "One-way Audio with Built-in Microphone (5m range)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "no_audio",
+            "name": "Remove Audio Function (NRE: $2,500 / MOQ: 20 pcs)",
+            "pnCode": "",
+            "specValue": "Audio Function Removed (No Microphone / No Audio Input)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       },
       "firmwareOption": {
@@ -757,8 +2282,25 @@ window.PRODUCTS_DATA = [
         "targetKey": "Firmware Version / Feature",
         "defaultOption": "standard",
         "options": [
-          { "id": "standard", "name": "Standard (Factory Default Firmware)", "pnCode": "", "specValue": "Standard Factory Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "customized", "name": "Customized Firmware (Client Specified)", "pnCode": "", "specValue": "Customized Firmware", "addonPrice": 0, "nreFee": 0, "moqImpact": 10, "requiresCustomInput": true }
+          {
+            "id": "standard",
+            "name": "Standard (Factory Default Firmware)",
+            "pnCode": "",
+            "specValue": "Standard Factory Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "customized",
+            "name": "Customized Firmware (Client Specified)",
+            "pnCode": "",
+            "specValue": "Customized Firmware",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10,
+            "requiresCustomInput": true
+          }
         ]
       },
       "irIlluminator": {
@@ -767,8 +2309,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "IR Illuminators / Light",
         "defaultOption": "940nm",
         "options": [
-          { "id": "940nm", "name": "Built-in 940nm Covert Invisible IR (5m Standard)", "pnCode": "", "specValue": "Built-in 940nm Covert Invisible IR (5m Smart IR II, IR LED x4)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "850nm", "name": "850nm IR Illuminators (NRE: $6,000 / MOQ: 1,000 pcs)", "pnCode": "", "specValue": "Built-in 850nm IR illuminators", "addonPrice": 0, "nreFee": 6000, "moqImpact": 1000 }
+          {
+            "id": "940nm",
+            "name": "Built-in 940nm Covert Invisible IR (5m Standard)",
+            "pnCode": "",
+            "specValue": "Built-in 940nm Covert Invisible IR (5m Smart IR II, IR LED x4)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "850nm",
+            "name": "850nm IR Illuminators (NRE: $6,000 / MOQ: 1,000 pcs)",
+            "pnCode": "",
+            "specValue": "Built-in 850nm IR illuminators",
+            "addonPrice": 0,
+            "nreFee": 6000,
+            "moqImpact": 1000
+          }
         ]
       },
       "casingColor": {
@@ -777,9 +2335,34 @@ window.PRODUCTS_DATA = [
         "targetKey": "Body Paint Color",
         "defaultOption": "ral9003",
         "options": [
-          { "id": "ral9003", "name": "RAL 9003 Signal White (Standard)", "pnCode": "TBD", "specValue": "RAL 9003 Signal White (Standard)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "ral9011", "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "RAL 9011 Graphite Black", "addonPrice": 20, "nreFee": 0, "moqImpact": 200 },
-          { "id": "custom_color", "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)", "pnCode": "TBD", "specValue": "Custom RAL Color", "addonPrice": 35, "nreFee": 0, "moqImpact": 200, "requiresCustomInput": true }
+          {
+            "id": "ral9003",
+            "name": "RAL 9003 Signal White (Standard)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9003 Signal White (Standard)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "ral9011",
+            "name": "RAL 9011 Graphite Black (Addon: +$20 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "RAL 9011 Graphite Black",
+            "addonPrice": 20,
+            "nreFee": 0,
+            "moqImpact": 200
+          },
+          {
+            "id": "custom_color",
+            "name": "Custom RAL Color (Addon: +$35 / MOQ: 200 pcs)",
+            "pnCode": "TBD",
+            "specValue": "Custom RAL Color",
+            "addonPrice": 35,
+            "nreFee": 0,
+            "moqImpact": 200,
+            "requiresCustomInput": true
+          }
         ]
       },
       "glossLevel": {
@@ -788,8 +2371,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "Gloss Level",
         "defaultOption": "gu10_20",
         "options": [
-          { "id": "gu10_20", "name": "GU 10~20 Matt Finish (Standard)", "pnCode": "", "specValue": "GU 10~20 (Matt Finish)", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "gu60_80", "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)", "pnCode": "", "specValue": "GU 60~80 (Semi-Gloss Finish)", "addonPrice": 45, "nreFee": 6000, "moqImpact": 200 }
+          {
+            "id": "gu10_20",
+            "name": "GU 10~20 Matt Finish (Standard)",
+            "pnCode": "",
+            "specValue": "GU 10~20 (Matt Finish)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "gu60_80",
+            "name": "GU 60~80 Semi-Gloss (Addon: +$45 / NRE: $6,000 / MOQ: 200 pcs)",
+            "pnCode": "",
+            "specValue": "GU 60~80 (Semi-Gloss Finish)",
+            "addonPrice": 45,
+            "nreFee": 6000,
+            "moqImpact": 200
+          }
         ]
       },
       "colorSamplePlate": {
@@ -798,8 +2397,24 @@ window.PRODUCTS_DATA = [
         "targetKey": "A5 Color Sample Plate",
         "defaultOption": "none",
         "options": [
-          { "id": "none", "name": "No Sample Plate Required", "pnCode": "", "specValue": "Not Required", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "a5_sample_5pcs", "name": "A5 Color Sample Plate (NRE: $600 USD)", "pnCode": "", "specValue": "A5 Color Sample Plate (5 pcs set)", "addonPrice": 0, "nreFee": 600, "moqImpact": 10 }
+          {
+            "id": "none",
+            "name": "No Sample Plate Required",
+            "pnCode": "",
+            "specValue": "Not Required",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "a5_sample_5pcs",
+            "name": "A5 Color Sample Plate (NRE: $600 USD)",
+            "pnCode": "",
+            "specValue": "A5 Color Sample Plate (5 pcs set)",
+            "addonPrice": 0,
+            "nreFee": 600,
+            "moqImpact": 10
+          }
         ]
       },
       "connectorType": {
@@ -808,12 +2423,61 @@ window.PRODUCTS_DATA = [
         "targetKey": "Interface & PoE Connector",
         "defaultOption": "m12_4pin",
         "options": [
-          { "id": "m12_4pin", "name": "M12 D-Coded 4-pin (Standard)", "pnCode": "", "specValue": "M12 Female 4-pin D-coded", "addonPrice": 0, "nreFee": 0, "moqImpact": 10 },
-          { "id": "m12_8pin_xcode", "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "M12 X-Code 8-pin", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 },
-          { "id": "harting_push_pull", "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)", "pnCode": "", "specValue": "Single HL3 cable with Harting Push & Pull connector", "addonPrice": 15, "nreFee": 0, "moqImpact": 500 }
+          {
+            "id": "m12_4pin",
+            "name": "M12 D-Coded 4-pin (Standard)",
+            "pnCode": "",
+            "specValue": "M12 Female 4-pin D-coded",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "m12_8pin_xcode",
+            "name": "M12 X-Code 8-pin Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "M12 X-Code 8-pin",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          },
+          {
+            "id": "harting_push_pull",
+            "name": "Harting Push & Pull Connector (Addon: +$15 / MOQ: 500 pcs)",
+            "pnCode": "",
+            "specValue": "Single HL3 cable with Harting Push & Pull connector",
+            "addonPrice": 15,
+            "nreFee": 0,
+            "moqImpact": 500
+          }
+        ]
+      },
+      "dedicatedPN": {
+        "label": "Dedicated System Part Number",
+        "targetCategory": "System Information",
+        "targetKey": "Dedicated System Part Number",
+        "defaultOption": "none",
+        "options": [
+          {
+            "id": "none",
+            "name": "Standard Configuration (No Dedicated P/N)",
+            "pnCode": "",
+            "specValue": "Standard Configuration (No Dedicated P/N)",
+            "addonPrice": 0,
+            "nreFee": 0,
+            "moqImpact": 10
+          },
+          {
+            "id": "dedicated_pn",
+            "name": "Dedicated P/N Creation (Recommended for repeat orders) [NRE: $2,500 USD]",
+            "pnCode": "",
+            "specValue": "Dedicated P/N Creation (Recommended for repeat orders)",
+            "addonPrice": 0,
+            "nreFee": 2500,
+            "moqImpact": 20
+          }
         ]
       }
     }
   }
-]
-;
+];

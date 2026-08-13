@@ -1,5 +1,5 @@
 /**
- * PDF Exporter module for CPQ Program (V2.1 Beta)
+ * PDF Exporter module for CPQ Program (V2.2 Beta)
  * Generates an official Specification Sheet & Customization Report for clients & internal operations in English.
  * Includes System Generated Part Number (P/N) breakdown and strict page-break protection.
  */
@@ -13,10 +13,12 @@ function getOptionConfig(model, key, selectedOptions) {
     const currentPower = selectedOptions['powerVariant'] || 'poe';
     const dynamicOpts = currentPower === 'poe' ? [
       { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 PoE Cable)", pnCode: "3082644400", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
-      { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+      { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+      { id: "nfpa140_cable", name: "NFPA-140 Certified Fireproof M12 Cable (Addon: +$18 / MOQ: 200 pcs)", pnCode: "TBD", specValue: "NFPA-140 Certified Fireproof Railway M12 Cable", addonPrice: 18, nreFee: 0, moqImpact: 200 }
     ] : [
       { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 DC Cable)", pnCode: "3080857800", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
-      { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+      { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+      { id: "nfpa140_cable", name: "NFPA-140 Certified Fireproof M12 Cable (Addon: +$18 / MOQ: 200 pcs)", pnCode: "TBD", specValue: "NFPA-140 Certified Fireproof Railway M12 Cable", addonPrice: 18, nreFee: 0, moqImpact: 200 }
     ];
     return dynamicOpts.find(o => o.id === selectedId);
   }

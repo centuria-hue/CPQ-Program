@@ -180,10 +180,12 @@ class CPQApp {
       const currentPower = this.selectedOptions['powerVariant'] || 'poe';
       const dynamicOpts = currentPower === 'poe' ? [
         { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 PoE Cable)", pnCode: "3082644400", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
-        { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+        { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+        { id: "nfpa140_cable", name: "NFPA-140 Certified Fireproof M12 Cable (Addon: +$18 / MOQ: 200 pcs)", pnCode: "TBD", specValue: "NFPA-140 Certified Fireproof Railway M12 Cable", addonPrice: 18, nreFee: 0, moqImpact: 200 }
       ] : [
         { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 DC Cable)", pnCode: "3080857800", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
-        { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+        { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+        { id: "nfpa140_cable", name: "NFPA-140 Certified Fireproof M12 Cable (Addon: +$18 / MOQ: 200 pcs)", pnCode: "TBD", specValue: "NFPA-140 Certified Fireproof Railway M12 Cable", addonPrice: 18, nreFee: 0, moqImpact: 200 }
       ];
       return dynamicOpts.find(o => o.id === activeOptId);
     }
@@ -258,12 +260,14 @@ class CPQApp {
             if (currentPower === 'poe') {
               availableOptions = [
                 { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 PoE Cable)", pnCode: "3082644400", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
-                { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+                { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 PoE Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (PoE)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+                { id: "nfpa140_cable", name: "NFPA-140 Certified Fireproof M12 Cable (Addon: +$18 / MOQ: 200 pcs)", pnCode: "TBD", specValue: "NFPA-140 Certified Fireproof Railway M12 Cable", addonPrice: 18, nreFee: 0, moqImpact: 200 }
               ];
             } else {
               availableOptions = [
                 { id: "std_cable", name: "Standard Fire-Resistant Cable (EN 45545 DC Cable)", pnCode: "3080857800", specValue: "Standard EN 45545 Certified Fire-Resistant Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
-                { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 }
+                { id: "hl3_cable", name: "HL3 High Fire Safety Cable (EN 45545-2 HL3 DC Cable)", pnCode: "TBD", specValue: "HL3 High Fire Safety Railway Cable (DC Power)", addonPrice: 0, nreFee: 0, moqImpact: 10 },
+                { id: "nfpa140_cable", name: "NFPA-140 Certified Fireproof M12 Cable (Addon: +$18 / MOQ: 200 pcs)", pnCode: "TBD", specValue: "NFPA-140 Certified Fireproof Railway M12 Cable", addonPrice: 18, nreFee: 0, moqImpact: 200 }
               ];
             }
           }
@@ -407,6 +411,7 @@ class CPQApp {
     let totalAddon = 0;
     let totalNRE = 0;
     let maxMOQ = this.selectedModel.baseMOQ;
+    let isCustomizedAny = false;
     const subPns = [];
     const pnCodes = [];
     const customizableLabels = [];
@@ -422,6 +427,10 @@ class CPQApp {
           totalNRE += activeOpt.nreFee || 0;
           if (activeOpt.moqImpact && activeOpt.moqImpact > maxMOQ) {
             maxMOQ = activeOpt.moqImpact;
+          }
+
+          if (activeOptId !== customConfig.defaultOption) {
+            isCustomizedAny = true;
           }
 
           if (activeOpt.pnCode) {
@@ -518,6 +527,14 @@ class CPQApp {
     // Official VIVOTEK Standard SKU Mapping for FE9391-EV-V2-M12
     if (this.selectedModel.id === 'FE9391-EV-V2-M12') {
       basePN = 'VIO100000174 (IP-CAMERA FE9391-EV-V2-M12(M))';
+    }
+
+    // MOQ Rule:
+    // If configuration has an official VIO Part Number (Standard Model), MOQ stays 10 pcs (unless specific option requires higher MOQ like 20, 200, 500, etc.)
+    // If configuration does not have a VIO Part Number (Custom P/N 1002-), MOQ floor for custom build is 20 pcs.
+    const isStandardVIO = basePN.startsWith('VIO');
+    if (!isStandardVIO && maxMOQ < 20) {
+      maxMOQ = 20;
     }
 
     const primaryPn = basePN;
