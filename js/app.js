@@ -746,11 +746,97 @@ class CPQApp {
   }
 }
 
+function tryDecryptData(passcode) {
+  if (!window.ENCRYPTED_PRODUCTS_DATA || !window.CryptoJS) return null;
+  try {
+    const bytes = CryptoJS.AES.decrypt(window.ENCRYPTED_PRODUCTS_DATA, passcode);
+    const decryptedText = bytes.toString(CryptoJS.enc.Utf8);
+    if (!decryptedText) return null;
+    const parsedData = JSON.parse(decryptedText);
+    if (Array.isArray(parsedData) && parsedData.length > 0) {
+      return parsedData;
+    }
+  } catch (e) {
+    return null;
+  }
+  return null;
+}
+
 function startApp() {
   try {
     localStorage.removeItem('CPQ_IMPORTED_PRODUCTS_DATA');
   } catch (e) {}
-  window.app = new CPQApp();
+
+  const overlay = document.getElementById('securityModalOverlay');
+  const passcodeInput = document.getElementById('passcodeInput');
+  const passcodeForm = document.getElementById('passcodeForm');
+  const errorAlert = document.getElementById('passcodeErrorAlert');
+  const togglePasscodeBtn = document.getElementById('togglePasscodeBtn');
+
+  // Check if session contains valid passcode already
+  const savedPasscode = sessionStorage.getItem('CPQ_UNLOCKED_PASSCODE');
+  if (savedPasscode) {
+    const decrypted = tryDecryptData(savedPasscode);
+    if (decrypted) {
+      window.PRODUCTS_DATA = decrypted;
+      if (overlay) overlay.style.display = 'none';
+      window.app = new CPQApp();
+      return;
+    }
+  }
+
+  // Show modal overlay
+  if (overlay) overlay.style.display = 'flex';
+
+  // Focus passcode input
+  if (passcodeInput) {
+    setTimeout(() => passcodeInput.focus(), 100);
+  }
+
+  // Toggle password visibility
+  if (togglePasscodeBtn && passcodeInput) {
+    togglePasscodeBtn.addEventListener('click', () => {
+      const isPwd = passcodeInput.type === 'password';
+      passcodeInput.type = isPwd ? 'text' : 'password';
+      togglePasscodeBtn.innerHTML = isPwd ? '<i class="fas fa-eye-slash"></i>' : '<i class="fas fa-eye"></i>';
+    });
+  }
+
+  const handleUnlock = () => {
+    const passcode = passcodeInput ? passcodeInput.value.trim() : '';
+    if (!passcode) return;
+
+    const decrypted = tryDecryptData(passcode);
+    if (decrypted) {
+      window.PRODUCTS_DATA = decrypted;
+      sessionStorage.setItem('CPQ_UNLOCKED_PASSCODE', passcode);
+      if (errorAlert) errorAlert.style.display = 'none';
+      if (overlay) {
+        overlay.style.transition = 'opacity 0.3s ease';
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          overlay.style.opacity = '1';
+        }, 300);
+      }
+      window.app = new CPQApp();
+    } else {
+      if (errorAlert) {
+        errorAlert.style.display = 'block';
+      }
+      if (passcodeInput) {
+        passcodeInput.value = '';
+        passcodeInput.focus();
+      }
+    }
+  };
+
+  if (passcodeForm) {
+    passcodeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleUnlock();
+    });
+  }
 }
 
 if (document.readyState === 'loading') {
