@@ -5,10 +5,12 @@ class CPQApp {
     this.selectedOptions = {};
     this.customColorValue = '';
     this.customFirmwareValue = '';
+    this.customOtherValue = '';
     
     this.salesName = '';
     this.customerName = '';
     this.projectName = '';
+    this.quoteDocId = 'TR-' + Math.floor(100000 + Math.random() * 900000);
     
     this.init();
   }
@@ -214,6 +216,7 @@ class CPQApp {
           const activeOptId = this.selectedOptions[item.customKey];
           const activeOpt = this.getActiveOption(customConfig, item.customKey, activeOptId);
           const needsInput = activeOpt && activeOpt.requiresCustomInput;
+          const isModified = activeOptId !== customConfig.defaultOption;
 
           let customInputFieldHtml = '';
 
@@ -237,6 +240,19 @@ class CPQApp {
                          placeholder="Enter Custom RAL Code / Name (e.g. RAL 7016 Anthracite Grey)" 
                          value="${this.customColorValue}"
                          style="border-color: var(--accent-cyan); background: #0f172a;">
+                </div>
+              `;
+            } else if (item.customKey === 'otherCustomization') {
+              customInputFieldHtml = `
+                <div style="margin-top: 8px;">
+                  <textarea class="form-control form-control-textarea custom-text-input" 
+                            data-custom-key="${item.customKey}"
+                            rows="5"
+                            placeholder="Enter Other Non-Standard Customization Details / Special Build Requirements..."
+                            style="border-color: var(--accent-cyan); background: #0f172a; width: 100%; font-family: monospace; font-size: 12px; line-height: 1.5; color: #f8fafc;">${this.customOtherValue}</textarea>
+                  <div style="font-size: 11px; color: var(--accent-amber); margin-top: 4px; display: flex; align-items: center; gap: 6px;">
+                    <i class="fas fa-info-circle"></i> NRE fee & MOQ will be quoted separately after R&D engineering workload evaluation.
+                  </div>
                 </div>
               `;
             }
@@ -273,18 +289,16 @@ class CPQApp {
           }
 
           html += `
-            <tr class="customizable-row">
-              <td class="spec-key">
+            <tr style="${isModified ? 'background: rgba(0, 240, 255, 0.04);' : ''}">
+              <td class="spec-key" style="vertical-align: top; padding-top: 12px;">
                 ${item.key}
-                <span class="badge-customizable">
-                  <i class="fas fa-sliders-h"></i> Custom
-                </span>
+                ${isModified ? '<span class="customized-badge"><i class="fas fa-sliders"></i> CUSTOMIZED</span>' : ''}
               </td>
               <td class="spec-val">
-                <select class="custom-select" data-custom-key="${item.customKey}" ${selectDisabledHtml}>
+                <select class="form-select custom-select" data-custom-key="${item.customKey}" ${selectDisabledHtml}>
                   ${availableOptions.map(opt => `
                     <option value="${opt.id}" ${opt.id === activeOptId ? 'selected' : ''}>
-                      ${opt.name} ${opt.pnCode ? `[P/N: ${opt.pnCode}]` : ''}
+                      ${opt.name}
                     </option>
                   `).join('')}
                 </select>
@@ -322,6 +336,14 @@ class CPQApp {
         this.selectedOptions[customKey] = newValue;
         
         if (customKey === 'powerVariant' && this.selectedModel.id === 'MD9560-V2-Series') {
+          const power = newValue;
+          const focal = this.selectedOptions['focalLength'] || '2.8mm';
+
+          if (power === 'dc_power') {
+            if (focal === '2.4mm') this.selectedOptions['focalLength'] = '2.8mm';
+            this.selectedOptions['cableRating'] = 'std_cable';
+            this.selectedOptions['casingColor'] = 'ral9003';
+          }
           this.renderSpecTable();
           this.updateCalculations();
           return;
@@ -350,7 +372,7 @@ class CPQApp {
         const customConfig = this.selectedModel.customizableSpecs[customKey];
         const selectedOpt = this.getActiveOption(customConfig, customKey, newValue);
         
-        if (selectedOpt && (selectedOpt.requiresCustomInput || customKey === 'casingColor' || customKey === 'firmwareOption')) {
+        if (selectedOpt && (selectedOpt.requiresCustomInput || customKey === 'casingColor' || customKey === 'firmwareOption' || customKey === 'otherCustomization')) {
           this.renderSpecTable();
         } else {
           const parentTd = select.parentElement;
@@ -372,6 +394,8 @@ class CPQApp {
           this.customColorValue = e.target.value;
         } else if (customKey === 'firmwareOption') {
           this.customFirmwareValue = e.target.value;
+        } else if (customKey === 'otherCustomization') {
+          this.customOtherValue = e.target.value;
         }
       });
     });
@@ -537,7 +561,11 @@ class CPQApp {
       maxMOQ = 20;
     }
 
-    const primaryPn = basePN;
+    let primaryPn = basePN;
+    if (this.selectedOptions['dedicatedPN'] === 'dedicated_pn') {
+      const docId = this.quoteDocId || ('TR-' + Math.floor(100000 + Math.random() * 900000));
+      primaryPn = `${this.selectedModel.id}-${docId}`;
+    }
 
     return {
       primaryPn,
@@ -572,8 +600,9 @@ class CPQApp {
     if (!this.selectedModel) return;
 
     const configData = {
-      version: "2.1",
+      version: "2.3",
       createdAt: new Date().toISOString(),
+      quoteDocId: this.quoteDocId,
       salesName: this.salesName,
       customerName: this.customerName,
       projectName: this.projectName,
@@ -581,11 +610,12 @@ class CPQApp {
       selectedOptions: this.selectedOptions,
       customColorValue: this.customColorValue,
       customFirmwareValue: this.customFirmwareValue,
+      customOtherValue: this.customOtherValue,
       calculations: this.calculateState()
     };
 
     const jsonStr = JSON.stringify(configData, null, 2);
-    const fileName = `CPQ_Quote_${this.selectedModel.id}_${(this.customerName || 'Customer').replace(/[^a-zA-Z0-9]/g, '_')}.json`;
+    const fileName = `CPQ_Quote_${this.selectedModel.id}_${this.quoteDocId}_${(this.customerName || 'Customer').replace(/[^a-zA-Z0-9]/g, '_')}.json`;
 
     this.downloadFile(fileName, jsonStr, 'application/json');
     this.showToast('Quotation configuration saved to JSON file!');
@@ -604,7 +634,8 @@ class CPQApp {
           throw new Error("Invalid quote configuration file format!");
         }
 
-        // Restore Sales Info
+        // Restore Sales Info & Doc ID
+        if (configData.quoteDocId) this.quoteDocId = configData.quoteDocId;
         this.salesName = configData.salesName || '';
         this.customerName = configData.customerName || '';
         this.projectName = configData.projectName || '';
@@ -618,6 +649,7 @@ class CPQApp {
 
         this.customColorValue = configData.customColorValue || '';
         this.customFirmwareValue = configData.customFirmwareValue || '';
+        this.customOtherValue = configData.customOtherValue || '';
 
         if (configData.selectedOptions) {
           this.selectedOptions = { ...configData.selectedOptions };
@@ -711,6 +743,26 @@ class CPQApp {
   handleExportPDF() {
     if (!this.selectedModel) return;
 
+    // Validation: Require salesName, customerName, and projectName before generating PDF
+    const sales = (this.salesName || '').trim();
+    const customer = (this.customerName || '').trim();
+    const project = (this.projectName || '').trim();
+
+    if (!sales || !customer || !project) {
+      const missingFields = [];
+      if (!sales) missingFields.push('Sales Representative');
+      if (!customer) missingFields.push('Customer Name');
+      if (!project) missingFields.push('Project Name');
+
+      alert(`Cannot export Spec PDF!\n\nPlease fill in all required quotation information fields before generating PDF:\n- ${missingFields.join('\n- ')}`);
+
+      if (!sales) document.getElementById('salesNameInput')?.focus();
+      else if (!customer) document.getElementById('customerNameInput')?.focus();
+      else if (!project) document.getElementById('projectNameInput')?.focus();
+
+      return;
+    }
+
     const calculations = this.calculateState();
     
     if (window.generateQuotePDF) {
@@ -722,6 +774,8 @@ class CPQApp {
         selectedOptions: this.selectedOptions,
         customColorValue: this.customColorValue,
         customFirmwareValue: this.customFirmwareValue,
+        customOtherValue: this.customOtherValue,
+        quoteDocId: this.quoteDocId,
         calculations
       });
     }
